@@ -62,6 +62,7 @@ export interface ProjectsContent {
 export interface ContactContent {
   sectionNumber: string;
   title: string;
+  subtitle: string;
   description: string;
   email: string;
   emailLabel: string;

@@ -107,7 +107,7 @@ export const HERO_CONTENT: HeroContent = {
   greeting: "Hallo, ich bin",
   tagline: "Ich entwickle maßgeschneiderte Webanwendungen für lokale Unternehmen im Ruhrgebiet.",
   description: "Ich bin Softwareentwickler und spezialisiere mich auf die Erstellung außergewöhnlicher digitaler Produkte. Aktuell konzentriere ich mich auf die Entwicklung moderner, barrierefreier und leistungsstarker Webanwendungen.",
-  ctaButton: "Meine Arbeit ansehen"
+  ctaButton: "Meine Arbeit"
 };
 
 export const ABOUT_CONTENT: AboutContent = {
@@ -130,16 +130,17 @@ export const SERVICES_CONTENT: ServicesContent = {
 
 export const PROJECTS_CONTENT: ProjectsContent = {
   sectionNumber: "03",
-  title: "Meine aktuellsten Projekte",
+  title: "Meine aktuellen Projekte",
   subtitle: ""
 };
 
 export const CONTACT_CONTENT: ContactContent = {
   sectionNumber: "04",
-  title: "Kontakt",
-  description: "Ich bin derzeit offen für neue Möglichkeiten und würde gerne von Ihrem Projekt hören. Ob Sie eine Frage haben oder einfach nur Hallo sagen möchten, ich werde mich bemühen, Ihnen schnellstmöglich zu antworten!",
+  title: "Wie geht's weiter?",
+  subtitle: "Schreiben Sie mir",
+  description: "Ich bin derzeit offen für neue Möglichkeiten und würde gerne von Ihrem Projekt hören. Ob Sie eine geschäftliche Anfrage haben oder einfach nur Kontakt aufnehmen möchten - ich bemühe mich, Ihnen schnellstmöglich zu antworten!",
   email: "cs8-code@gmail.com",
-  emailLabel: "Schreiben Sie mir"
+  emailLabel: "Sag Hallo"
 };
 
 export const FOOTER_CONTENT: FooterContent = {

@@ -131,14 +131,15 @@ export const SERVICES_CONTENT: ServicesContent = {
 
 export const PROJECTS_CONTENT: ProjectsContent = {
   sectionNumber: "03",
-  title: "Things I've Built Recently",
+  title: "Some Things I've Built Recently",
   subtitle: ""
 };
 
 export const CONTACT_CONTENT: ContactContent = {
   sectionNumber: "04",
-  title: "Get In Touch",
-  description: "I'm currently open to new opportunities and would love to hear about your project. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+  title: "What's Next?",
+  subtitle: "Get In Touch",
+  description: "I'm currently open to new opportunities and would love to hear about your project. Whether you have business requests, questions or just want to get in touch, I'll try my best to get back to you!",
   email: "cs8-code@gmail.com",
   emailLabel: "Say Hello"
 };
