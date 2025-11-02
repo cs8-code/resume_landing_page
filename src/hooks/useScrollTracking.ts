@@ -1,28 +1,46 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+
+function debounce<T extends (...args: any[]) => void>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout | null = null;
+
+  return (...args: Parameters<T>) => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = setTimeout(() => func(...args), wait);
+  };
+}
 
 export function useScrollTracking() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > 50);
 
-      const sections = ['home', 'about', 'services', 'projects', 'contact'];
-      const current = sections.find(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
-        }
-        return false;
-      });
-      if (current) setActiveSection(current);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const sections = ['home', 'about', 'services', 'projects', 'contact'];
+    const current = sections.find(section => {
+      const element = document.getElementById(section);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        return rect.top <= 100 && rect.bottom >= 100;
+      }
+      return false;
+    });
+    if (current) setActiveSection(current);
   }, []);
+
+  useEffect(() => {
+    const debouncedScroll = debounce(handleScroll, 100);
+    window.addEventListener('scroll', debouncedScroll);
+    // Initial check
+    handleScroll();
+    
+    return () => window.removeEventListener('scroll', debouncedScroll);
+  }, [handleScroll]);
 
   return { scrolled, activeSection };
 }

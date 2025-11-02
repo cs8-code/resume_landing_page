@@ -24,6 +24,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <img 
                 src={project.image} 
                 alt={project.title}
+                loading="lazy"
+                width={1200}
+                height={675}
                 className="w-full h-full object-cover"
               />
             ) : (

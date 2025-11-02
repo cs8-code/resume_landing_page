@@ -25,10 +25,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   });
 
   const setLanguageWithLog = (lang: Language) => {
-    console.log('Setting language in context to:', lang);
     localStorage.setItem('language', lang);
     // Mark that the user explicitly chose a language so we respect it on future loads.
     localStorage.setItem('languageSetByUser', 'true');
+    // Update HTML lang attribute
+    document.getElementById('html-root')?.setAttribute('lang', lang);
     setLanguage(lang);
   };
 
