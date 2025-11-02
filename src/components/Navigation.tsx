@@ -10,7 +10,7 @@ interface NavigationProps {
 
 export function Navigation({ scrolled, activeSection }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { navItems, siteTitle } = useLocalizedData();
+  const { navItems } = useLocalizedData();
 
   const handleNavigation = (sectionId: string) => {
     scrollToSection(sectionId);
@@ -25,9 +25,10 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
         <div className="flex justify-between items-center h-16">
           <button
             onClick={() => handleNavigation('home')}
-            className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 transition-all"
+            className="text-xl font-bold hover:opacity-80 transition-all"
           >
-            {siteTitle}
+            <span className="text-gray-300">code</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">cs8</span>
           </button>
 
           <div className="hidden md:flex space-x-8">

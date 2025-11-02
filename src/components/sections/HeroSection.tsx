@@ -7,7 +7,7 @@ export function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
   const { heroContent } = useLocalizedData();
 
-  const displayName = isHovered ? "codeCS8" : "Cengiz";
+  const displayName = isHovered ? "codecs8" : "Cengiz";
 
   return (
     <section id="home" className="min-h-screen flex items-center relative px-4 py-20">
@@ -16,27 +16,31 @@ export function HeroSection() {
           <div className="inline-block">
             <span className="text-blue-400 text-base font-mono tracking-wider animate-pulse">{heroContent.greeting}</span>
           </div>
-          <h1 
-  className="text-6xl font-medium text-gray-100 font-grotesk"
-  onMouseEnter={() => setIsHovered(true)}
-  onMouseLeave={() => setIsHovered(false)}
->
-  {displayName.split("").map((char, i) => (
-    <motion.span
-      key={i}
-      initial={{ opacity: 0 }}
-      animate={{ 
-        opacity: 1,
-        color: isHovered ? "#3b82f6" : "#f3f4f6",
-        textShadow: isHovered ? "0 0 20px rgba(59,130,246,0.9)" : "0 0 0px rgba(59,130,246,0)"
-      }}
-      transition={{ duration: 0.2 }}
-    >
-      {char === " " ? "\u00A0" : char}
-    </motion.span>
-  ))}
-</h1>
-
+         <h1 
+            className="text-6xl font-medium text-gray-100 font-grotesk"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {displayName.split("").map((char, i) => {
+              // Check if this character is part of "cs8" (positions 4, 5, 6 in "codecs8")
+              const isCs8 = i >= 4 && i <= 6;
+              
+              return (
+                <motion.span
+                  key={i}
+                  initial={{ opacity: 0}}
+                  animate={{ 
+                    opacity: 1,
+                    color: (isHovered && isCs8) ? "#3b82f6" : "#f3f4f6",
+                    textShadow: (isHovered && isCs8) ? "0 0 20px rgba(59,130,246,0.9)" : "0 0 0px rgba(59,130,246,0)"
+                  }}
+                  transition={{ duration: 1 }}
+                >
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              );
+            })}
+      </h1>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-400 leading-snug">
             {heroContent.tagline}
           </h2>
