@@ -100,7 +100,7 @@ export const SERVICES: Service[] = [
 ];
 
 export const CONTACT_EMAIL = 'cs8-code@gmail.com';
-export const SITE_TITLE = 'codeCS8';
+export const SITE_TITLE = 'codecs8';
 export const AUTHOR_NAME = 'Cengiz Salihoglu';
 
 export const HERO_CONTENT: HeroContent = {
@@ -140,10 +140,10 @@ export const CONTACT_CONTENT: ContactContent = {
   subtitle: "Schreiben Sie mir",
   description: "Ich bin derzeit offen für neue Möglichkeiten und würde gerne von Ihrem Projekt hören. Ob Sie eine geschäftliche Anfrage haben oder einfach nur Kontakt aufnehmen möchten - ich bemühe mich, Ihnen schnellstmöglich zu antworten!",
   email: "cs8-code@gmail.com",
-  emailLabel: "Sag Hallo"
+  emailLabel: "Sag Hallo!"
 };
 
 export const FOOTER_CONTENT: FooterContent = {
-  copyright: "© 2025 Cengiz Salihoglu. Alle Rechte vorbehalten.",
+  copyright: "© 2025 codecs8. Alle Rechte vorbehalten.",
   builtWith: "Erstellt mit React & Tailwind CSS"
 };

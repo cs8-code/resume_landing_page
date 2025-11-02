@@ -5,7 +5,7 @@ import * as deData from '../constants/data.de';
 export function useLocalizedData() {
   const { language } = useLanguage();
   
-  const data = language === 'en' ? enData : deData;
+  const data = language === 'de' ? deData : enData;
   
   return {
     navItems: data.NAV_ITEMS,

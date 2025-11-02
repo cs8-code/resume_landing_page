@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 
-type Language = 'en' | 'de';
+type Language = 'de' | 'en';
 
 interface LanguageContextType {
   language: Language;
@@ -11,13 +11,24 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
+    // Respect an explicit user choice if they already set a language.
+    // If they never set a language in this browser, default to German ('de').
     const savedLanguage = localStorage.getItem('language');
-    return (savedLanguage === 'en' || savedLanguage === 'de') ? savedLanguage : 'en';
+    const userSetFlag = localStorage.getItem('languageSetByUser') === 'true';
+
+    if (userSetFlag) {
+      return (savedLanguage === 'de' || savedLanguage === 'en') ? (savedLanguage as Language) : 'de';
+    }
+
+    // No explicit user preference found — default to German.
+    return 'de';
   });
 
   const setLanguageWithLog = (lang: Language) => {
     console.log('Setting language in context to:', lang);
     localStorage.setItem('language', lang);
+    // Mark that the user explicitly chose a language so we respect it on future loads.
+    localStorage.setItem('languageSetByUser', 'true');
     setLanguage(lang);
   };
 
