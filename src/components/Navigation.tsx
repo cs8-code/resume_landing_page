@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { scrollToSection } from '../utils/navigation';
 import { useLocalizedData } from '../hooks/useLocalizedData';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 interface NavigationProps {
   scrolled: boolean;
@@ -31,7 +32,7 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">cs8</span>
           </button>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -46,14 +47,20 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
                 }`}></span>
               </button>
             ))}
+            <div className="ml-4">
+              <LanguageSwitcher />
+            </div>
           </div>
 
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex items-center space-x-4 md:hidden">
+            <LanguageSwitcher />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 rounded-lg hover:bg-white/10 transition-colors"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 

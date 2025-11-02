@@ -7,18 +7,12 @@ import { ServicesSection } from './components/sections/ServicesSection';
 import { ProjectsSection } from './components/sections/ProjectsSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { Footer } from './components/Footer';
-import { LanguageSwitcher } from './components/LanguageSwitcher';
 
 function App() {
   const { scrolled, activeSection } = useScrollTracking();
 
   return (
     <>
-      {/* Language Switcher - Highest z-index */}
-      <div className="fixed top-4 right-4 z-[100]">
-        <LanguageSwitcher />
-      </div>
-
       <div className="min-h-screen bg-gray-950 text-gray-300 relative">
         {/* Background gradients */}
         <div className="fixed inset-0 -z-10">
