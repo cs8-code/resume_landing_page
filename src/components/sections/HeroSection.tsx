@@ -5,19 +5,21 @@ import { useState } from "react";
 export function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
 
+  const displayName = isHovered ? "cs8code" : "Cengiz";
+
   return (
     <section id="home" className="min-h-screen flex items-center relative px-4 py-20">
       <div className="max-w-6xl mx-auto w-full">
         <div className="space-y-8 animate-slide-in-left max-w-4xl">
           <div className="inline-block">
-            <span className="text-blue-400 text-base font-mono tracking-wider animate-pulse">Hi there, this is</span>
+            <span className="text-blue-400 text-base font-mono tracking-wider animate-pulse">Hi, my name is</span>
           </div>
           <h1 
   className="text-6xl font-medium text-gray-100"
   onMouseEnter={() => setIsHovered(true)}
   onMouseLeave={() => setIsHovered(false)}
 >
-  {(isHovered ? "cs8code" : "Cengiz Salihoglu").split("").map((char, i) => (
+  {displayName.split("").map((char, i) => (
     <motion.span
       key={i}
       initial={{ opacity: 0 }}
@@ -35,11 +37,11 @@ export function HeroSection() {
 
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-400 leading-snug">
-            I build modern custom software and web apps for local businesses.
+            I build custom web apps for local businesses in the Ruhrgebiet area.
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
-            I'm a software engineer specializing in building exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products.
-          </p>
+            <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
+            I'm a software engineer specializing in creating exceptional digital products. Currently, I'm focused on building modern, accessible, and performance-driven web applications.
+            </p>
           <div className="flex flex-wrap gap-4 pt-6">
             <button
               onClick={() => scrollToSection('projects')}

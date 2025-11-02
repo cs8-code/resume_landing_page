@@ -43,7 +43,7 @@ export function AboutSection() {
             <div className="absolute inset-0 border-2 border-blue-500 rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(59,130,246,0.3)]"></div>
               <div className="relative w-full h-full bg-gradient-to-br from-blue-500/20 to-cyan-500/10 rounded-full overflow-hidden shadow-2xl shadow-blue-500/20">
                 <img
-                  src="/profilfoto.jpg"
+                  src="/H31392 Salihoglu digi 05.jpg"
                   alt="Cengiz Salihoglu"
                   className="w-full h-full object-cover"
                 />
