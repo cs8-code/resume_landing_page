@@ -7,7 +7,7 @@ export function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
   const { heroContent } = useLocalizedData();
 
-  const displayName = isHovered ? "cs8code" : "Cengiz";
+  const displayName = isHovered ? "codeCS8" : "Cengiz";
 
   return (
     <section id="home" className="min-h-screen flex items-center relative px-4 py-20">

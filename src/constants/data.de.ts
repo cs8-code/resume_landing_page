@@ -100,7 +100,7 @@ export const SERVICES: Service[] = [
 ];
 
 export const CONTACT_EMAIL = 'cs8-code@gmail.com';
-export const SITE_TITLE = 'cs8code';
+export const SITE_TITLE = 'codeCS8';
 export const AUTHOR_NAME = 'Cengiz Salihoglu';
 
 export const HERO_CONTENT: HeroContent = {
