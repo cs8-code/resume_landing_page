@@ -54,7 +54,7 @@ export const PROJECTS: Project[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   { href: 'https://github.com', icon: 'github', label: 'GitHub' },
   { href: 'https://www.linkedin.com/in/cengiz-salihoglu/', icon: 'linkedin', label: 'LinkedIn' },
-  { href: 'mailto:cs8-code@gmail.com', icon: 'mail', label: 'E-Mail' },
+  { href: 'mailto:cs8.code@gmail.com', icon: 'mail', label: 'E-Mail' },
 ];
 
 export const SERVICES: Service[] = [
@@ -99,7 +99,7 @@ export const SERVICES: Service[] = [
   }
 ];
 
-export const CONTACT_EMAIL = 'cs8-code@gmail.com';
+export const CONTACT_EMAIL = 'cs8.code@gmail.com';
 export const SITE_TITLE = 'codecs8';
 export const AUTHOR_NAME = 'Cengiz Salihoglu';
 
@@ -139,7 +139,7 @@ export const CONTACT_CONTENT: ContactContent = {
   title: "Wie geht's weiter?",
   subtitle: "Schreiben Sie mir",
   description: "Ich bin derzeit offen für neue Möglichkeiten und würde gerne von Ihrem Projekt hören. Ob Sie eine geschäftliche Anfrage haben oder einfach nur Kontakt aufnehmen möchten - ich bemühe mich, Ihnen schnellstmöglich zu antworten!",
-  email: "cs8-code@gmail.com",
+  email: "cs8.code@gmail.com",
   emailLabel: "Sag Hallo!"
 };
 
