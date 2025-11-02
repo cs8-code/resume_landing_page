@@ -11,7 +11,7 @@ export function LanguageSwitcher() {
         console.log('Click detected');
         setLanguage(language === 'en' ? 'de' : 'en');
       }}
-      className="px-3 py-1.5 text-sm font-medium rounded-md bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white transition-colors"
+      className="px-3 py-1.5 text-sm font-medium rounded-md bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white transition-colors font-mono tracking-wider"
     >
       {language === 'en' ? 'DE' : 'EN'}
     </button>

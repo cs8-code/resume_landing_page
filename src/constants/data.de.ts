@@ -59,7 +59,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const SERVICES: Service[] = [
   {
-    title: 'Unternehmenswebseiten',
+    title: 'Business Webseiten',
     description: 'Professionelle Webseiten, maßgeschneidert für Ihre Geschäftsanforderungen. Klares Design, schnelle Performance und mobiloptimierte Layouts, die Ihre Marke hervorheben.',
     features: [
       'Individuelles Design',

@@ -17,7 +17,7 @@ export function HeroSection() {
             <span className="text-blue-400 text-base font-mono tracking-wider animate-pulse">{heroContent.greeting}</span>
           </div>
           <h1 
-  className="text-6xl font-medium text-gray-100"
+  className="text-6xl font-medium text-gray-100 font-grotesk"
   onMouseEnter={() => setIsHovered(true)}
   onMouseLeave={() => setIsHovered(false)}
 >
