@@ -1,9 +1,11 @@
 import { scrollToSection } from '../../utils/navigation';
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useLocalizedData } from '../../hooks/useLocalizedData';
 
 export function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
+  const { heroContent } = useLocalizedData();
 
   const displayName = isHovered ? "cs8code" : "Cengiz";
 
@@ -12,7 +14,7 @@ export function HeroSection() {
       <div className="max-w-6xl mx-auto w-full">
         <div className="space-y-8 animate-slide-in-left max-w-4xl">
           <div className="inline-block">
-            <span className="text-blue-400 text-base font-mono tracking-wider animate-pulse">Hi, my name is</span>
+            <span className="text-blue-400 text-base font-mono tracking-wider animate-pulse">{heroContent.greeting}</span>
           </div>
           <h1 
   className="text-6xl font-medium text-gray-100"
@@ -35,12 +37,11 @@ export function HeroSection() {
   ))}
 </h1>
 
-
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-400 leading-snug">
-            I build custom web apps for local businesses in the Ruhrgebiet area.
+            {heroContent.tagline}
           </h2>
             <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
-            I'm a software engineer specializing in creating exceptional digital products. Currently, I'm focused on building modern, accessible, and performance-driven web applications.
+              {heroContent.description}
             </p>
           <div className="flex flex-wrap gap-4 pt-6">
             <button
@@ -48,7 +49,7 @@ export function HeroSection() {
               className="group px-10 py-5 border-2 border-blue-500 text-blue-400 rounded-lg font-mono text-sm hover:bg-blue-500/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
             >
               <span className="inline-flex items-center gap-2">
-                Check out my work
+                {heroContent.ctaButton}
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
               </span>
             </button>

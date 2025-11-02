@@ -1,4 +1,4 @@
-import type { NavItem, Project, Technology, SocialLink, Service } from '../types';
+import type { NavItem, Project, Technology, SocialLink, Service, HeroContent, AboutContent, ServicesContent, ProjectsContent, ContactContent, FooterContent } from '../types';
 
 export const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'Home' },
@@ -33,8 +33,7 @@ export const PROJECTS: Project[] = [
     title: 'Clearing Out Sercices Website',
     description: 'A modern website for a local clearing out service, featuring service descriptions, customer testimonials, and a contact form for inquiries and quotes.',
     technologies: [],
-    github: '#',
-    external: '#',
+    external: 'https://cs8-code.github.io/spaceheroes/',
     icon: 'palette',
     image: '/spaceheroes_screenshot.png',
     featured: true,
@@ -44,8 +43,7 @@ export const PROJECTS: Project[] = [
     title: 'Gardening Service Website',
     description: 'A landing page for a local gardening service, showcasing services, portfolio, and contact information with a focus on SEO and user experience.',
     technologies: [],
-    github: '#',
-    external: '#',
+    github: 'https://github.com/cs8-code/thegreenbros.git',
     icon: 'code',
     image: '/greenbros_screenshot.png',
     featured: true,
@@ -105,3 +103,47 @@ export const SERVICES: Service[] = [
 export const CONTACT_EMAIL = 'cs8-code@gmail.com';
 export const SITE_TITLE = 'cs8code';
 export const AUTHOR_NAME = 'Cengiz Salihoglu';
+
+export const HERO_CONTENT: HeroContent = {
+  greeting: "Hi, my name is",
+  tagline: "I build custom web apps for local businesses in the Ruhrgebiet area.",
+  description: "I'm a software engineer specializing in creating exceptional digital products. Currently, I'm focused on building modern, accessible, and performance-driven web applications.",
+  ctaButton: "Check out my work"
+};
+
+export const ABOUT_CONTENT: AboutContent = {
+  sectionNumber: "01",
+  title: "About Me",
+  paragraphs: [
+    "Hello! I'm Cengiz, a software engineer based in Mülheim an der Ruhr, Germany. I have been helping small businesses in the Ruhrgebiet create modern, reliable, and user-friendly websites—from concept to finished online presence.",
+    "After graduating in Computer Science in 2021 I was working as a software engineer for tech companies in germany such as Capgemini and ALDI South IT. At the same time I started building small web apps just for fun.",
+    "Fast-forward to today, I have been helping small businesses in the Ruhrgebiet area create modern, reliable, and user-friendly websites—from concept to finished online presence. I place particular emphasis on clean code, scalable architecture, and customized solutions that are tailored to your business. Whether you need a new website, want to expand existing systems, or are looking for technical advice, I can help you implement your digital project efficiently."
+  ],
+  techListLabel: "Here are a few technologies I've been working with recently:",
+  imageAlt: "Cengiz Salihoglu"
+};
+
+export const SERVICES_CONTENT: ServicesContent = {
+  sectionNumber: "02",
+  title: "What I Can Do For You",
+  subtitle: "From concept to launch, I provide complete solutions tailored to your business needs"
+};
+
+export const PROJECTS_CONTENT: ProjectsContent = {
+  sectionNumber: "03",
+  title: "Things I've Built Recently",
+  subtitle: ""
+};
+
+export const CONTACT_CONTENT: ContactContent = {
+  sectionNumber: "04",
+  title: "Get In Touch",
+  description: "I'm currently open to new opportunities and would love to hear about your project. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+  email: "cs8-code@gmail.com",
+  emailLabel: "Say Hello"
+};
+
+export const FOOTER_CONTENT: FooterContent = {
+  copyright: "© 2025 Cengiz Salihoglu. All rights reserved.",
+  builtWith: "Built with React & Tailwind CSS"
+};

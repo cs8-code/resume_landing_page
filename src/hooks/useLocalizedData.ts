@@ -1,0 +1,26 @@
+import { useLanguage } from '../context/LanguageContext';
+import * as enData from '../constants/data';
+import * as deData from '../constants/data.de';
+
+export function useLocalizedData() {
+  const { language } = useLanguage();
+  
+  const data = language === 'en' ? enData : deData;
+  
+  return {
+    navItems: data.NAV_ITEMS,
+    technologies: data.TECHNOLOGIES,
+    projects: data.PROJECTS,
+    socialLinks: data.SOCIAL_LINKS,
+    services: data.SERVICES,
+    contactEmail: data.CONTACT_EMAIL,
+    siteTitle: data.SITE_TITLE,
+    authorName: data.AUTHOR_NAME,
+    heroContent: data.HERO_CONTENT,
+    aboutContent: data.ABOUT_CONTENT,
+    servicesContent: data.SERVICES_CONTENT,
+    projectsContent: data.PROJECTS_CONTENT,
+    contactContent: data.CONTACT_CONTENT,
+    footerContent: data.FOOTER_CONTENT,
+  };
+}

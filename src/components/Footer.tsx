@@ -1,5 +1,5 @@
 import { Mail, Linkedin, Github } from 'lucide-react';
-import { SOCIAL_LINKS, AUTHOR_NAME } from '../constants/data';
+import { useLocalizedData } from '../hooks/useLocalizedData';
 
 const iconMap = {
   github: Github,
@@ -8,12 +8,14 @@ const iconMap = {
 };
 
 export function Footer() {
+  const { socialLinks, footerContent } = useLocalizedData();
+  
   return (
     <footer className="py-8 px-4 relative">
       <div className="max-w-7xl mx-auto text-center">
         <div className="flex md:hidden justify-center gap-6 mb-6">
-          {SOCIAL_LINKS.map((link) => {
-            const Icon = iconMap[link.icon];
+          {socialLinks.map((link) => {
+            const Icon = iconMap[link.icon as keyof typeof iconMap];
             return (
               <a
                 key={link.label}
@@ -28,14 +30,10 @@ export function Footer() {
             );
           })}
         </div>
-        <a
-          href="https://github.com/cs8-code"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-400 hover:to-cyan-400 transition-all font-mono text-xs"
-        >
-          Built by {AUTHOR_NAME}
-        </a>
+        <div className="text-gray-400 space-y-2 font-mono text-xs">
+          <p>{footerContent.builtWith}</p>
+          <p>{footerContent.copyright}</p>
+        </div>
       </div>
     </footer>
   );

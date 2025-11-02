@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { NAV_ITEMS, SITE_TITLE } from '../constants/data';
 import { scrollToSection } from '../utils/navigation';
+import { useLocalizedData } from '../hooks/useLocalizedData';
 
 interface NavigationProps {
   scrolled: boolean;
@@ -10,6 +10,7 @@ interface NavigationProps {
 
 export function Navigation({ scrolled, activeSection }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { navItems, siteTitle } = useLocalizedData();
 
   const handleNavigation = (sectionId: string) => {
     scrollToSection(sectionId);
@@ -26,11 +27,11 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
             onClick={() => handleNavigation('home')}
             className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 transition-all"
           >
-            {SITE_TITLE}
+            {siteTitle}
           </button>
 
           <div className="hidden md:flex space-x-8">
-            {NAV_ITEMS.map((item) => (
+            {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavigation(item.id)}
@@ -58,7 +59,7 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-950/95 backdrop-blur-lg border-t border-blue-500/20 animate-fade-in">
           <div className="px-4 py-4 space-y-3">
-            {NAV_ITEMS.map((item) => (
+            {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavigation(item.id)}

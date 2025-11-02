@@ -31,3 +31,43 @@ export interface Service {
   features: string[];
   icon: 'globe' | 'layout' | 'shoppingCart';
 }
+
+export interface HeroContent {
+  greeting: string;
+  tagline: string;
+  description: string;
+  ctaButton: string;
+}
+
+export interface AboutContent {
+  sectionNumber: string;
+  title: string;
+  paragraphs: string[];
+  techListLabel: string;
+  imageAlt: string;
+}
+
+export interface ServicesContent {
+  sectionNumber: string;
+  title: string;
+  subtitle: string;
+}
+
+export interface ProjectsContent {
+  sectionNumber: string;
+  title: string;
+  subtitle: string;
+}
+
+export interface ContactContent {
+  sectionNumber: string;
+  title: string;
+  description: string;
+  email: string;
+  emailLabel: string;
+}
+
+export interface FooterContent {
+  copyright: string;
+  builtWith: string;
+}
