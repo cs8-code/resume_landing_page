@@ -19,8 +19,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const images = project.images && project.images.length > 0 ? project.images : project.image ? [project.image] : [];
   const [index, setIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [announce, setAnnounce] = useState('');
-  const initialAnnounceRef = useRef(true);
 
   useEffect(() => {
     // reset index when images change
@@ -36,19 +34,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
     if (e.key === 'ArrowRight') next();
   };
 
-  // Announce image changes for screen readers (skip initial mount)
-  useEffect(() => {
-    if (images.length === 0) return;
-    if (initialAnnounceRef.current) {
-      initialAnnounceRef.current = false;
-      return;
-    }
-    setAnnounce(`${project.title}, image ${index + 1} of ${images.length}`);
-    // clear announcement after a short time to keep region tidy
-    const t = window.setTimeout(() => setAnnounce(''), 2000);
-    return () => window.clearTimeout(t);
-  }, [index, images.length, project.title]);
-
   return (
     <div className="grid md:grid-cols-12 gap-6 items-center group animate-fade-in">
       <div className={`md:col-span-7 relative ${!isLeftAligned ? 'md:order-first' : ''}`}>
@@ -60,10 +45,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
             className="aspect-video bg-gray-900/80 backdrop-blur-sm flex items-center justify-center relative"
             aria-live="polite"
           >
-            {/* Visually hidden live region for screen readers */}
-            <div aria-live="polite" aria-atomic="true" className="sr-only">
-              {announce}
-            </div>
             {images.length > 0 ? (
               <>
                 <img

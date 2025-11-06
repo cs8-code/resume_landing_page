@@ -59,18 +59,18 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 
 export const SERVICES: Service[] = [
-  {
-    title: 'Business Websites',
-    description: 'Professional websites tailored to your business needs. Clean design, fast performance, and mobile-responsive layouts that make your brand stand out.',
+   {
+    title: 'Software as a Service (SaaS)',
+    description: 'Custom software solutions delivered as a service, designed to streamline your business processes and boost efficiency. Scalable, secure, and accessible from anywhere.',
     features: [
-      'Custom Design',
-      'Mobile Responsive',
-      'SEO Optimized',
-      'Fast Loading',
-      'Content Management',
-      'Analytics Integration'
+      'Custom Feature Development',
+      'Scalable Architecture',
+      'User Authentication',
+      'Subscription Management',
+      'Secure Data Handling',
+      'Ongoing Maintenance'
     ],
-    icon: 'globe'
+    icon: 'cloud'
   },
   {
     title: 'Landing Pages',
@@ -97,7 +97,8 @@ export const SERVICES: Service[] = [
       'Inventory System'
     ],
     icon: 'shoppingCart'
-  }
+  },
+ 
 ];
 
 export const CONTACT_EMAIL = 'cs8.code@gmail.com';

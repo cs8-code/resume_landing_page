@@ -1,10 +1,11 @@
-import { Globe, Layout, ShoppingCart, Check } from 'lucide-react';
+import { Globe, Layout, ShoppingCart, Check, Cloud } from 'lucide-react';
 import type { Service } from '../types';
 
 const iconMap = {
   globe: Globe,
   layout: Layout,
   shoppingCart: ShoppingCart,
+  cloud: Cloud
 };
 
 interface ServiceCardProps {

@@ -59,17 +59,17 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const SERVICES: Service[] = [
   {
-    title: 'Business Webseiten',
-    description: 'Professionelle Webseiten, maßgeschneidert für Ihre Geschäftsanforderungen. Klares Design, schnelle Performance und mobiloptimierte Layouts, die Ihre Marke hervorheben.',
+    title: '(SaaS) Lösungen',
+    description: 'Maßgeschneiderte Softwarelösungen als Service, die Ihre Geschäftsprozesse optimieren und die Effizienz steigern. Skalierbar, sicher und von überall zugänglich.',
     features: [
-      'Individuelles Design',
-      'Mobile Optimierung',
-      'SEO-Optimierung',
-      'Schnelle Ladezeiten',
-      'Content Management',
-      'Analytics-Integration'
+      'Entwicklung individueller Funktionen',
+      'Skalierbare Architektur',
+      'Benutzerauthentifizierung',
+      'Abonnementverwaltung',
+      'Sichere Datenverarbeitung',
+      'Laufende Wartung'
     ],
-    icon: 'globe'
+    icon: 'cloud'
   },
   {
     title: 'Landing Pages',

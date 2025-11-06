@@ -34,7 +34,7 @@ export interface Service {
   title: string;
   description: string;
   features: string[];
-  icon: 'globe' | 'layout' | 'shoppingCart';
+  icon: 'globe' | 'layout' | 'shoppingCart' | 'cloud';
 }
 
 export interface HeroContent {
