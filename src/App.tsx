@@ -7,12 +7,14 @@ import { ServicesSection } from './components/sections/ServicesSection';
 import { ProjectsSection } from './components/sections/ProjectsSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { Footer } from './components/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const { scrolled, activeSection } = useScrollTracking();
 
   return (
     <>
+     <Analytics />
       <div className="min-h-screen bg-gray-950 text-gray-300 relative">
         {/* Background gradients */}
         <div className="fixed inset-0 -z-10">
@@ -31,6 +33,7 @@ function App() {
           <ProjectsSection />
           <ContactSection />
           <Footer />
+      
         </div>
       </div>
     </>
