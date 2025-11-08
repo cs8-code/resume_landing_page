@@ -5,9 +5,9 @@ import { useLocalizedData } from '../../hooks/useLocalizedData';
 
 const TYPING_SPEED = 120;
 const CURSOR_BLINK_SPEED = 500;
-const HIGHLIGHT_COLOR = "#3b82f6";
+const HIGHLIGHT_COLOR = "#0967f3ff";
 const DEFAULT_COLOR = "#f3f4f6";
-const HIGHLIGHT_SHADOW = "0 0 20px rgba(59,130,246,0.9)";
+const HIGHLIGHT_SHADOW = "0 0 20px rgba(28, 13, 231, 0.9)";
 const NO_SHADOW = "0 0 0px rgba(59,130,246,0)";
 
 export function HeroSection() {

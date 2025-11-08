@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { scrollToSection } from '../utils/navigation';
 import { useLocalizedData } from '../hooks/useLocalizedData';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import logo from '../assets/logo.png';
 
 interface NavigationProps {
   scrolled: boolean;
@@ -25,12 +26,15 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <button
-            onClick={() => handleNavigation('home')}
-            className="text-xl font-bold hover:opacity-80 transition-all"
-          >
-            <span className="text-gray-300">code</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">cs8</span>
-          </button>
+              onClick={() => handleNavigation('home')}
+              className="hover:opacity-80 hover:scale-105 transition-all"
+               >
+          <img 
+            src="/logo.PNG"
+            alt="codecs8-logo" 
+            className="h-12 w-auto"
+          />
+        </button>
 
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
