@@ -105,8 +105,8 @@ export const AUTHOR_NAME = 'Cengiz Salihoglu';
 
 export const HERO_CONTENT: HeroContent = {
   greeting: "Hallo, ich bin",
-  tagline: "Ich entwickle maßgeschneiderte Webanwendungen für lokale Unternehmen im Ruhrgebiet.",
-  description: "Ich bin Softwareentwickler und spezialisiere mich auf die Entwicklung außergewöhnlicher digitaler Produkte. Aktuell konzentriere ich mich auf die Entwicklung moderner, barrierefreier und leistungsstarker Webanwendungen.",
+  tagline: "Ich entwickle digitale Lösungen für lokale Unternehmen im Ruhrgebiet.",
+  description: "Ich bin Softwareentwickler und spezialisiere mich auf die Entwicklung maßgeschneiderter digitaler Produkte. Aktuell konzentriere ich mich auf die Entwicklung moderner, barrierefreier und leistungsstarker Webanwendungen.",
   ctaButton: "Meine Arbeit"
 };
 
