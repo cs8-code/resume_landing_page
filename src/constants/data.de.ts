@@ -115,7 +115,7 @@ export const ABOUT_CONTENT: AboutContent = {
   title: "Über Mich",
   paragraphs: [
     "Hallo! Ich bin Cengiz, ein Softwareentwickler aus Mülheim an der Ruhr. Ich unterstütze kleine Unternehmen im Ruhrgebiet dabei, moderne, zuverlässige und benutzerfreundliche Webseiten zu erstellen – vom Konzept bis zum fertigen Internetauftritt.",
-    "Nach meinem Informatikstudium 2021 war ich als Softwareentwickler für Technologieunternehmen in Deutschland tätig, unter anderem für Capgemini und ALDI SÜD IT. Parallel dazu begann ich, kleine Webanwendungen zum Spaß zu entwickeln.",
+    "Nach Abschluss meines Informatikstudiums war ich als Softwareentwickler für Technologieunternehmen in Deutschland tätig, unter anderem für Capgemini und ALDI SÜD IT. Parallel dazu begann ich, kleine Webanwendungen für Freunde und Bekannte zu entwickeln.",
     "Bis heute unterstütze ich kleine Unternehmen im Ruhrgebiet bei der Erstellung moderner, zuverlässiger und benutzerfreundlicher Webseiten – vom Konzept bis zum fertigen Internetauftritt. Dabei lege ich besonderen Wert auf sauberen Code, skalierbare Architektur und maßgeschneiderte Lösungen, die auf Ihr Unternehmen zugeschnitten sind. Ob Sie eine neue Webseite benötigen, bestehende Systeme erweitern möchten oder technische Beratung suchen, ich helfe Ihnen dabei, Ihr digitales Projekt effizient umzusetzen."
   ],
   techListLabel: "Hier sind einige Technologien, mit denen ich zuletzt gearbeitet habe:",

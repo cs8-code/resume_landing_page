@@ -117,7 +117,7 @@ export const ABOUT_CONTENT: AboutContent = {
   title: "About Me",
   paragraphs: [
     "Hello! I'm Cengiz, a software engineer based in Mülheim an der Ruhr, Germany. I have been helping small businesses in the Ruhrgebiet create modern, reliable, and user-friendly websites—from concept to finished online presence.",
-    "After graduating in Computer Science in 2021 I was working as a software engineer for tech companies in germany such as Capgemini and ALDI South IT. At the same time I started building small web apps just for fun.",
+    "After graduating in Computer Science I was working as a software engineer for tech companies in germany such as Capgemini and ALDI South IT. At the same time I started building small web apps for friends and acquaintances.",
     "Fast-forward to today, I have been helping small businesses in the Ruhrgebiet area create modern, reliable, and user-friendly websites—from concept to finished online presence. I place particular emphasis on clean code, scalable architecture, and customized solutions that are tailored to your business. Whether you need a new website, want to expand existing systems, or are looking for technical advice, I can help you implement your digital project efficiently."
   ],
   techListLabel: "Here are a few technologies I've been working with recently:",
