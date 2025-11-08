@@ -3,7 +3,6 @@ import { Menu, X } from 'lucide-react';
 import { scrollToSection } from '../utils/navigation';
 import { useLocalizedData } from '../hooks/useLocalizedData';
 import { LanguageSwitcher } from './LanguageSwitcher';
-import logo from '../assets/logo.png';
 
 interface NavigationProps {
   scrolled: boolean;
