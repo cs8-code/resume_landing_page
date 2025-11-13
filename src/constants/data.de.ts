@@ -107,9 +107,9 @@ export const SITE_TITLE = 'codecs8';
 export const AUTHOR_NAME = 'Cengiz Salihoglu';
 
 export const HERO_CONTENT: HeroContent = {
-  greeting: "Hallo, ich bin",
-  tagline: "Ich entwickle digitale Lösungen für lokale Unternehmen im Ruhrgebiet.",
-  description: "Ich bin Softwareentwickler und spezialisiere mich auf die Entwicklung maßgeschneiderter digitaler Produkte. Aktuell konzentriere ich mich auf die Entwicklung moderner, barrierefreier und leistungsstarker Webanwendungen.",
+  greeting: "Hallo, ich bin Cengiz",
+  tagline: "Ich entwickle digitale Lösungen für lokale Unternehmen.",
+  description: "Von der Idee bis zur maßgeschneiderten, funktionalen Webanwendung - Ich kombiniere technische Expertise mit kreativem Design um außergewöhnliche digitale Erlebnisse zu schaffen.",
   ctaButton: "Meine Arbeit"
 };
 

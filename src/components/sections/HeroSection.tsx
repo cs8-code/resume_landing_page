@@ -128,18 +128,20 @@ export function HeroSection() {
           <div className="grid md:grid-cols-2 gap-8 items-start mb-12">
             {/* Left Column - Software Engineer (static) */}
             <div>
-              <h2 className="text-5xl sm:text-6xl font-bold text-gray-100 leading-tight">
+              <h2 className="text-5xl sm:text-6xl font-bold text-gray-100 leading-tight mb-4">
                 Software Engineer
               </h2>
-            </div>
-
-            {/* Right Column - Tagline */}
-            <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-400 leading-snug">
                 {heroContent.tagline}
               </h2>
             </div>
 
+            {/* Right Column - Description */}
+            <div>
+              <h2 className="text-x1 sm:text-3xl font-light text-gray-400 leading-snug">
+                {heroContent.description}
+              </h2>
+            </div>
           </div>
 
           {/* Technology Icons Scrolling */}

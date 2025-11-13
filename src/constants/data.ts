@@ -110,8 +110,8 @@ export const AUTHOR_NAME = 'Cengiz Salihoglu';
 
 export const HERO_CONTENT: HeroContent = {
   greeting: "Hi, my name is Cengiz",
-  tagline: "I build digital solutions for local businesses in the Ruhrgebiet area.",
-  description: "I'm a software engineer specializing in creating customized and scalable digital products. Currently, I'm focused on building modern, accessible, and performance-driven web applications.",
+  tagline: "I build digital solutions for local businesses.",
+  description: "Transforming ideas into elegant, functional web solutions. I combine technical expertise with creative problem-solving to deliver exceptional digital experiences.",
   ctaButton: "Check out my work"
 };
 
