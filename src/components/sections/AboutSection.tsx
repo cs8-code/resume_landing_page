@@ -33,7 +33,7 @@ export function AboutSection() {
             </ul>
           </div>
           <div className="md:col-span-2 relative group animate-fade-in">
-            <div className="relative w-72 h-72 mx-auto">
+            <div className="relative w-64 sm:w-72 h-64 sm:h-72 mx-auto max-w-full">
             <div className="absolute inset-0 border-2 border-blue-500 rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(59,130,246,0.3)]"></div>
               <div className="relative w-full h-full bg-gradient-to-br from-blue-500/20 to-cyan-500/10 rounded-full overflow-hidden shadow-2xl shadow-blue-500/20">
                 <img
