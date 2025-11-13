@@ -2,8 +2,6 @@ import type { NavItem, Project, Technology, SocialLink, Service, HeroContent, Ab
 
 export const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'Start' },
-  { id: 'about', label: 'Über mich' },
-  { id: 'services', label: 'Leistungen' },
   { id: 'projects', label: 'Projekte' },
   { id: 'contact', label: 'Kontakt' },
 ];

@@ -97,6 +97,19 @@
   .delay-300 {
     animation-delay: 0.3s;
   }
+
+  .animate-scroll-rtl {
+    animation: scrollRTL 20s linear infinite;
+  }
+
+  @keyframes scrollRTL {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 @keyframes fadeIn {

@@ -2,8 +2,6 @@ import { useScrollTracking } from './hooks/useScrollTracking';
 import { Navigation } from './components/Navigation';
 import { SocialLinks } from './components/SocialLinks';
 import { HeroSection } from './components/sections/HeroSection';
-import { AboutSection } from './components/sections/AboutSection';
-import { ServicesSection } from './components/sections/ServicesSection';
 import { ProjectsSection } from './components/sections/ProjectsSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { Footer } from './components/Footer';
@@ -28,12 +26,10 @@ function App() {
           <Navigation scrolled={scrolled} activeSection={activeSection} />
           <SocialLinks />
           <HeroSection />
-          <AboutSection />
-          <ServicesSection />
           <ProjectsSection />
           <ContactSection />
           <Footer />
-      
+
         </div>
       </div>
     </>
