@@ -67,6 +67,8 @@ export function ContactForm() {
         setFormData({ name: '', email: '', message: '' });
         setTimeout(() => setStatus('idle'), 5000);
       } else {
+        const errorData = await response.json();
+        console.error('Server error:', errorData);
         setStatus('error');
         setTimeout(() => setStatus('idle'), 5000);
       }

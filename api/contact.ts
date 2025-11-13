@@ -12,12 +12,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     const { name, email, message } = req.body;
 
+    // Log for debugging
+    console.log('Contact form submission:', { name, email, hasMessage: !!message });
+
     // Validate required fields
     if (!name || !email || !message) {
+      console.log('Missing fields:', { name: !!name, email: !!email, message: !!message });
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
+    // Check if API key is available
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY not found in environment variables');
+      return res.status(500).json({ error: 'Email service not configured' });
+    }
+
     // Send email using Resend
+    console.log('Attempting to send email...');
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev', // Resend test address (change to your domain after verification)
       to: 'cs8.code@gmail.com',
@@ -32,9 +43,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       `,
     });
 
+    console.log('Email sent successfully:', data);
     return res.status(200).json({ success: true, data });
   } catch (error) {
     console.error('Error sending email:', error);
-    return res.status(500).json({ error: 'Failed to send email' });
+    return res.status(500).json({
+      error: 'Failed to send email',
+      details: error instanceof Error ? error.message : 'Unknown error'
+    });
   }
 }
