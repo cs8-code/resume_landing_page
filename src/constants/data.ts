@@ -119,7 +119,7 @@ export const HERO_CONTENT: HeroContent = {
 };
 
 export const SERVICES_CONTENT: ServicesContent = {
-  title: "What I Do",
+  title: "What I offer",
 };
 
 export const PROJECTS_CONTENT: ProjectsContent = {

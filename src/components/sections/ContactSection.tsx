@@ -28,7 +28,7 @@ export function ContactSection() {
 
         <div className="mt-8 text-center">
           <p className="text-gray-400 mb-4">
-            {language === 'de' ? 'Oder kontaktieren Sie mich über WhatsApp:' : 'Or reach out via WhatsApp:'}
+            {language === 'de' ? 'Oder kontaktieren Sie mich über:' : 'Or reach out via:'}
           </p>
           <a
             href={`https://wa.me/${whatsappNumber}?`}

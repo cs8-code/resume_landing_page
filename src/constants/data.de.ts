@@ -117,7 +117,7 @@ export const HERO_CONTENT: HeroContent = {
 };
 
 export const SERVICES_CONTENT: ServicesContent = {
-  title: "Was ich mache",
+  title: "Was ich anbiete",
 };
 
 export const PROJECTS_CONTENT: ProjectsContent = {
