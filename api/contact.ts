@@ -19,7 +19,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     // Send email using Resend
     const data = await resend.emails.send({
-      from: 'Portfolio Contact <onboarding@resend.dev>', // Use your verified domain
+      from: 'onboarding@resend.dev', // Resend test address (change to your domain after verification)
       to: 'cs8.code@gmail.com',
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
