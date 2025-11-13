@@ -34,13 +34,12 @@ const getTechIcon = (techName: string): JSX.Element => {
 
 export function HeroSection() {
   const { heroContent, services, servicesContent, technologies } = useLocalizedData();
-
-  const nameDefault = "Software Engineer";
   const nameHover = "codecs8";
 
   const [displayedText, setDisplayedText] = useState("");
   const [isHovered, setIsHovered] = useState(false);
   const [cursorVisible, setCursorVisible] = useState(true);
+  const [typingComplete, setTypingComplete] = useState(false);
   const typingIntervalRef = useRef<number | null>(null);
 
   // Function to type any given text
@@ -50,6 +49,7 @@ export function HeroSection() {
       typingIntervalRef.current = null;
     }
     setDisplayedText("");
+    setTypingComplete(false);
     let i = 0;
     typingIntervalRef.current = window.setInterval(() => {
       setDisplayedText(text.slice(0, i + 1));
@@ -57,23 +57,15 @@ export function HeroSection() {
       if (i >= text.length && typingIntervalRef.current) {
         window.clearInterval(typingIntervalRef.current);
         typingIntervalRef.current = null;
+        setTypingComplete(true); // Mark typing as complete
       }
     }, TYPING_SPEED);
   };
 
-  // Type “Cengiz” when the page loads
+  // Type name on initial load
   useEffect(() => {
-    typeText(nameDefault);
-  }, []);
-
-  // Retype name depending on hover
-  useEffect(() => {
-    if (isHovered) {
-      typeText(nameHover);
-    } else {
-      typeText(nameDefault);
-    }
-  }, [isHovered]);
+    typeText(nameHover);
+  }, []); // Empty dependency array means this runs once on mount
 
   // Blinking cursor
   useEffect(() => {
@@ -88,50 +80,57 @@ export function HeroSection() {
       <div className="max-w-4xl mx-auto w-full">
         {/* Hero Content */}
         <div className="mb-24 animate-slide-in-left">
-          <div className="mb-6">
+          {/* codecs8 animation - Centered at top */}
+          <div className="flex justify-center mb-8">
+            <h1
+              id="hero-title"
+              className="text-5xl sm:text-6xl font-bold text-gray-100 cursor-pointer select-none leading-tight"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              aria-label={`codecs8`}
+            >
+              {displayedText.split("").map((char, i) => {
+                // highlight "cs8" after typing is complete OR on hover
+                const isCs8 = (typingComplete || isHovered) && i >= 4 && i <= 6;
+                return (
+                  <motion.span
+                    key={i}
+                    animate={{
+                      color: isCs8 ? HIGHLIGHT_COLOR : DEFAULT_COLOR,
+                      textShadow: isCs8 ? HIGHLIGHT_SHADOW : NO_SHADOW,
+                    }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+                    aria-hidden={true}
+                  >
+                    {char}
+                  </motion.span>
+                );
+              })}
+
+              {/* Blinking cursor */}
+              <motion.span
+                animate={{ opacity: cursorVisible ? 1 : 0 }}
+                transition={{ duration: 0.2 }}
+                className="text-blue-400"
+                aria-hidden="true"
+              >
+                |
+              </motion.span>
+            </h1>
+          </div>
+
+          <div className="mb-6 text-left">
             <span className="text-blue-400 text-base font-mono tracking-wider animate-pulse">
               {heroContent.greeting}
             </span>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 items-start mb-12">
-            {/* Left Column - Name/Title */}
+            {/* Left Column - Software Engineer (static) */}
             <div>
-              <h1
-                id="hero-title"
-                className="text-5xl sm:text-6xl font-bold text-gray-100 mb-4 cursor-pointer select-none leading-tight"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                aria-label={`${heroContent.greeting} ${isHovered ? nameHover : nameDefault}`}
-              >
-                {displayedText.split("").map((char, i) => {
-                  // highlight "cs8" only in codecs8
-                  const isCs8 = isHovered && i >= 4 && i <= 6;
-                  return (
-                    <motion.span
-                      key={i}
-                      animate={{
-                        color: isCs8 ? HIGHLIGHT_COLOR : DEFAULT_COLOR,
-                        textShadow: isCs8 ? HIGHLIGHT_SHADOW : NO_SHADOW,
-                      }}
-                      transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
-                      aria-hidden={true}
-                    >
-                      {char}
-                    </motion.span>
-                  );
-                })}
-
-                {/* Blinking cursor */}
-                <motion.span
-                  animate={{ opacity: cursorVisible ? 1 : 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="text-blue-400"
-                  aria-hidden="true"
-                >
-                  |
-                </motion.span>
-              </h1>
+              <h2 className="text-5xl sm:text-6xl font-bold text-gray-100 leading-tight">
+                Software Engineer
+              </h2>
             </div>
 
             {/* Right Column - Tagline */}
