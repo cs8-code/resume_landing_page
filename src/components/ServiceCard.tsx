@@ -1,13 +1,20 @@
 import { useState } from 'react';
-import { ChevronDown, Check } from 'lucide-react';
+import { ChevronDown, Check, Cloud, Layout, ShoppingCart } from 'lucide-react';
 import type { Service } from '../types';
 
 interface ServiceCardProps {
   service: Service;
 }
 
+const iconMap = {
+  cloud: Cloud,
+  layout: Layout,
+  shoppingCart: ShoppingCart,
+};
+
 export function ServiceCard({ service }: ServiceCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const Icon = iconMap[service.icon];
 
   return (
     <div className="border border-gray-800 rounded-lg overflow-hidden bg-gray-900/30 hover:border-blue-500/50 transition-all duration-300">
@@ -22,7 +29,12 @@ export function ServiceCard({ service }: ServiceCardProps) {
         className="w-full p-6 flex items-center justify-between hover:bg-gray-900/50 transition-colors duration-300 text-left"
         aria-expanded={isOpen}
       >
-        <h3 className="text-xl font-bold text-gray-100">{service.title}</h3>
+        <div className="flex items-center gap-4">
+          <div className="p-3 bg-blue-500/10 border border-blue-500/30 rounded-lg">
+            <Icon size={24} className="text-blue-400" />
+          </div>
+          <h3 className="text-xl font-bold text-gray-100">{service.title}</h3>
+        </div>
         <ChevronDown
           size={24}
           className={`text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4 ${
