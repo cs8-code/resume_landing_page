@@ -1,6 +1,5 @@
-import { Smartphone, Palette, Code, Github, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Smartphone, Palette, Code, Github, ExternalLink } from 'lucide-react';
 import type { Project } from '../types';
-import { useState, useEffect, useRef } from 'react';
 
 const iconMap = {
   smartphone: Smartphone,
@@ -15,77 +14,42 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   const Icon = iconMap[project.icon];
   const isLeftAligned = project.imagePosition === 'left';
-  // Support both legacy `image` and new `images` array
-  const images = project.images && project.images.length > 0 ? project.images : project.image ? [project.image] : [];
-  const [index, setIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  // Support both legacy `image` and new `images` array - use first image only
+  const displayImage = project.images && project.images.length > 0 ? project.images[0] : project.image;
+  const projectUrl = project.external;
 
-  useEffect(() => {
-    // reset index when images change
-    setIndex(0);
-  }, [project.images, project.image]);
-
-  const prev = () => setIndex((i) => (i - 1 + images.length) % images.length);
-  const next = () => setIndex((i) => (i + 1) % images.length);
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (images.length <= 1) return;
-    if (e.key === 'ArrowLeft') prev();
-    if (e.key === 'ArrowRight') next();
+  const handleImageClick = () => {
+    if (projectUrl) {
+      window.open(projectUrl, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
     <div className="grid md:grid-cols-12 gap-6 items-center group animate-fade-in">
       <div className={`md:col-span-7 relative ${!isLeftAligned ? 'md:order-first' : ''}`}>
-        <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/10 via-gray-900 to-cyan-500/10 shadow-2xl group-hover:shadow-blue-500/30 transition-all duration-300 border border-gray-800 group-hover:border-blue-500/50">
-          <div
-            ref={containerRef}
-            tabIndex={images.length > 0 ? 0 : -1}
-            onKeyDown={handleKeyDown}
-            className="aspect-video bg-gray-900/80 backdrop-blur-sm flex items-center justify-center relative"
-            aria-live="polite"
-          >
-            {images.length > 0 ? (
-              <>
-                <img
-                  src={images[index]}
-                  alt={`${project.title} screenshot ${index + 1}`}
-                  loading="lazy"
-                  width={1200}
-                  height={675}
-                  className="w-full h-full object-cover"
-                />
-
-                {images.length > 1 && (
-                  <>
-                    <button
-                      onClick={prev}
-                      aria-label="Previous image"
-                      className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full focus:outline-none"
-                    >
-                      <ChevronLeft size={20} />
-                    </button>
-                    <button
-                      onClick={next}
-                      aria-label="Next image"
-                      className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full focus:outline-none"
-                    >
-                      <ChevronRight size={20} />
-                    </button>
-
-                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-                      {images.map((_, i) => (
-                        <button
-                          key={i}
-                          onClick={() => setIndex(i)}
-                          aria-label={`Show image ${i + 1}`}
-                          className={`w-2 h-2 rounded-full ${i === index ? 'bg-white' : 'bg-white/40'}`}
-                        />
-                      ))}
-                    </div>
-                  </>
-                )}
-              </>
+        <div
+          className={`relative rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/10 via-gray-900 to-cyan-500/10 shadow-2xl group-hover:shadow-blue-500/30 transition-all duration-300 border border-gray-800 group-hover:border-blue-500/50 ${projectUrl ? 'cursor-pointer' : ''}`}
+          onClick={handleImageClick}
+          role={projectUrl ? 'button' : undefined}
+          tabIndex={projectUrl ? 0 : undefined}
+          onKeyDown={(e) => {
+            if (projectUrl && (e.key === 'Enter' || e.key === ' ')) {
+              e.preventDefault();
+              handleImageClick();
+            }
+          }}
+          aria-label={projectUrl ? `Visit ${project.title} website` : undefined}
+        >
+          <div className="aspect-video bg-gray-900/80 backdrop-blur-sm flex items-center justify-center relative">
+            {displayImage ? (
+              <img
+                src={displayImage}
+                alt={`${project.title} screenshot`}
+                loading="lazy"
+                width={1200}
+                height={675}
+                className="w-full h-full object-cover"
+              />
             ) : (
               <Icon size={100} className="text-blue-400 opacity-40 group-hover:opacity-70 transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.8)]" />
             )}
