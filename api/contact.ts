@@ -44,6 +44,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
 
     console.log('Email sent successfully:', data);
+
+    // Check if there was an error from Resend
+    if (data.error) {
+      console.error('Resend error:', data.error);
+      return res.status(500).json({ error: 'Failed to send email', details: data.error });
+    }
+
     return res.status(200).json({ success: true, data });
   } catch (error) {
     console.error('Error sending email:', error);
