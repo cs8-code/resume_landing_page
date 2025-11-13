@@ -30,8 +30,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Send email using Resend
     console.log('Attempting to send email...');
     const data = await resend.emails.send({
-      from: 'onboarding@resend.dev', // Resend test address (change to your domain after verification)
-      to: 'cs8121995@googlemail.com', // Must use your Resend signup email in testing mode
+      from: 'contact@codecs8.de', 
+      to: 'cs8.code@gmail.com', 
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
