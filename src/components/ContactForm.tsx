@@ -55,7 +55,11 @@ export function ContactForm() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
 
       if (response.ok) {
@@ -67,6 +71,7 @@ export function ContactForm() {
         setTimeout(() => setStatus('idle'), 5000);
       }
     } catch (error) {
+      console.error('Error submitting form:', error);
       setStatus('error');
       setTimeout(() => setStatus('idle'), 5000);
     }
