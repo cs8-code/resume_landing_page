@@ -1,4 +1,4 @@
-import type { NavItem, Project, Technology, SocialLink, Service, HeroContent, AboutContent, ServicesContent, ProjectsContent, ContactContent, FooterContent } from '../types';
+import type { NavItem, Project, Technology, SocialLink, Service, HeroContent, ProjectsContent, ContactContent, FooterContent } from '../types';
 
 export const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'Home' },
@@ -8,11 +8,13 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const TECHNOLOGIES: Technology[] = [
   { name: 'Java' },
-  { name: 'JavaScript/TypeScript' },
+  { name: 'TypeScript' },
   { name: 'React' },
   { name: 'Node.js' },
   { name: 'Tailwind CSS' },
-  { name: 'Supabase' }
+  { name: 'Supabase' },
+  { name: 'Git' },
+  { name: 'JavaScript' }
 ];
 
 export const PROJECTS: Project[] = [
@@ -107,22 +109,10 @@ export const SITE_TITLE = 'codecs8';
 export const AUTHOR_NAME = 'Cengiz Salihoglu';
 
 export const HERO_CONTENT: HeroContent = {
-  greeting: "Hi, my name is",
+  greeting: "Hi, my name is Cengiz",
   tagline: "I build digital solutions for local businesses in the Ruhrgebiet area.",
   description: "I'm a software engineer specializing in creating customized and scalable digital products. Currently, I'm focused on building modern, accessible, and performance-driven web applications.",
   ctaButton: "Check out my work"
-};
-
-export const ABOUT_CONTENT: AboutContent = {
-  sectionNumber: "01",
-  title: "About Me",
-  paragraphs: [
-    "Hello! I'm Cengiz, a software engineer based in Mülheim an der Ruhr, Germany. I have been helping small businesses in the Ruhrgebiet create modern, reliable, and user-friendly websites—from concept to finished online presence.",
-    "After graduating in Computer Science I was working as a software engineer for tech companies in germany such as Capgemini and ALDI International Services. At the same time I started building small web apps for friends and acquaintances.",
-    "Fast-forward to today, I have been helping small businesses in the Ruhrgebiet area create modern, reliable, and user-friendly websites—from concept to finished online presence. I place particular emphasis on clean code, scalable architecture, and customized solutions that are tailored to your business. Whether you need a new website, want to expand existing systems, or are looking for technical advice, I can help you implement your digital project efficiently."
-  ],
-  techListLabel: "Here are a few technologies I've been working with recently:",
-  imageAlt: "Cengiz Salihoglu"
 };
 
 export const SERVICES_CONTENT: ServicesContent = {

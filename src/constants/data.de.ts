@@ -12,7 +12,9 @@ export const TECHNOLOGIES: Technology[] = [
   { name: 'React' },
   { name: 'Node.js' },
   { name: 'Tailwind CSS' },
-  { name: 'Supabase' }
+  { name: 'Supabase' },
+  { name: 'Git' },
+  { name: 'JavaScript' }
 ];
 
 export const PROJECTS: Project[] = [
