@@ -24,17 +24,10 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <button
-              onClick={() => handleNavigation('home')}
-              className="hover:opacity-80 hover:scale-105 transition-all"
-               >
-          <img 
-            src="/logo.PNG"
-            alt="codecs8-logo" 
-            className="h-12 w-auto"
-          />
-        </button>
+          {/* Empty div for left spacing */}
+          <div className="w-20"></div>
 
+          {/* Centered navigation items */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
@@ -50,11 +43,14 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
                 }`}></span>
               </button>
             ))}
-            <div className="ml-4">
-              <LanguageSwitcher />
-            </div>
           </div>
 
+          {/* Language switcher on the right */}
+          <div className="hidden md:block">
+            <LanguageSwitcher />
+          </div>
+
+          {/* Mobile menu */}
           <div className="flex items-center space-x-4 md:hidden">
             <LanguageSwitcher />
             <button
