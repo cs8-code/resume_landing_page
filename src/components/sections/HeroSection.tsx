@@ -1,4 +1,3 @@
-import { scrollToSection } from '../../utils/navigation';
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import { useLocalizedData } from '../../hooks/useLocalizedData';
@@ -131,17 +130,13 @@ export function HeroSection() {
                   |
                 </motion.span>
               </h1>
+            </div>
 
+            {/* Right Column - Tagline */}
+            <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-400 leading-snug">
                 {heroContent.tagline}
               </h2>
-            </div>
-
-            {/* Right Column - Description */}
-            <div>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                {heroContent.description}
-              </p>
             </div>
 
           </div>

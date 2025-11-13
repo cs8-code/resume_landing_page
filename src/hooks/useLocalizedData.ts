@@ -25,7 +25,6 @@ export function useLocalizedData() {
     siteTitle: data.SITE_TITLE,
     authorName: data.AUTHOR_NAME,
     heroContent: data.HERO_CONTENT,
-    aboutContent: data.ABOUT_CONTENT,
     servicesContent: data.SERVICES_CONTENT,
     projectsContent: data.PROJECTS_CONTENT,
     contactContent: data.CONTACT_CONTENT,

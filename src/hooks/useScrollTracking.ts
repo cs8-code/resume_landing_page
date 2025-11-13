@@ -21,7 +21,7 @@ export function useScrollTracking() {
   const handleScroll = useCallback(() => {
     setScrolled(window.scrollY > 50);
 
-    const sections = ['home', 'about', 'services', 'projects', 'contact'];
+    const sections = ['home', 'projects', 'contact'];
     const current = sections.find(section => {
       const element = document.getElementById(section);
       if (element) {
