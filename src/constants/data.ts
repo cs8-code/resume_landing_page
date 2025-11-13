@@ -1,4 +1,4 @@
-import type { NavItem, Project, Technology, SocialLink, Service, HeroContent, ProjectsContent, ContactContent, FooterContent } from '../types';
+import type { NavItem, Project, Technology, SocialLink, Service, HeroContent, ServicesContent, ProjectsContent, ContactContent, FooterContent } from '../types';
 
 export const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'Home' },
@@ -21,6 +21,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'siportal',
     title: 'Construction Industry Networking Platform',
+    status: 'In Development',
     description: 'A digital platform that connects subcontractors and construction supervisors — matching expertise with projects and enabling collaboration across the industry.',
     technologies: ['React', 'TypeScript', 'Supabase (PostgreSQL)', 'Tailwind CSS'],
     github: 'https://github.com/cs8-code/siportal.git',
@@ -33,6 +34,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'spaceheroes',
     title: 'Clearing Out Sercices Website',
+    status: 'Deployed',
     description: 'A modern website for a local clearing out service, featuring service descriptions, customer testimonials, and a contact form for inquiries and quotes.',
     technologies: [],
     external: 'https://cs8-code.github.io/spaceheroes/',
@@ -44,6 +46,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'greenbros',
     title: 'Gardening Service Website',
+    status: 'In Development',
     description: 'A landing page for a local gardening service, showcasing services, portfolio, and contact information with a focus on SEO and user experience.',
     technologies: [],
     github: 'https://github.com/cs8-code/thegreenbros.git',
@@ -116,22 +119,18 @@ export const HERO_CONTENT: HeroContent = {
 };
 
 export const SERVICES_CONTENT: ServicesContent = {
-  sectionNumber: "02",
-  title: "What I Can Do For You",
-  subtitle: "From concept to launch, I provide complete solutions tailored to your business needs"
+  title: "What I Do",
 };
 
 export const PROJECTS_CONTENT: ProjectsContent = {
-  sectionNumber: "03",
-  title: "Some Things I've Built Recently",
+  title: "Recent Projects",
   subtitle: ""
 };
 
 export const CONTACT_CONTENT: ContactContent = {
-  sectionNumber: "04",
   title: "What's Next?",
   subtitle: "Get In Touch",
-  description: "I'm currently open to new opportunities and would love to hear about your project. Whether you have business requests, questions or just want to get in touch, I'll try my best to get back to you!",
+  description: "Do you have a question or a specific project in mind? I am open to new ideas and look forward to hearing from you!",
   email: "cs8.code@gmail.com",
   emailLabel: "Say Hello"
 };

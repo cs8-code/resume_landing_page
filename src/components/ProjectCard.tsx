@@ -57,9 +57,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
       <div className={`md:col-span-5 space-y-5 ${isLeftAligned ? 'md:text-right' : ''}`}>
-        <h3 className="text-3xl font-bold text-gray-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all duration-300">
-          {project.title}
-        </h3>
+        <div>
+          <h3 className="text-3xl font-bold text-gray-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all duration-300">
+            {project.title}
+          </h3>
+          <span className="inline-block mt-2 text-xs font-mono text-blue-400 px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full">
+            {project.status}
+          </span>
+        </div>
         <div className="bg-gray-900/80 backdrop-blur-sm p-7 rounded-xl shadow-xl border border-gray-800 group-hover:border-blue-500/30 transition-all duration-300">
           <p className="text-gray-300 leading-relaxed text-base">
             {project.description}

@@ -7,6 +7,7 @@ export interface Project {
   /** stable id used to associate language-independent resources (images, links) */
   id: string;
   title: string;
+  status: string;
   description: string;
   technologies: string[];
   github?: string;
@@ -42,28 +43,16 @@ export interface HeroContent {
   ctaButton: string;
 }
 
-export interface AboutContent {
-  sectionNumber: string;
-  title: string;
-  paragraphs: string[];
-  techListLabel: string;
-  imageAlt: string;
-}
-
 export interface ServicesContent {
-  sectionNumber: string;
   title: string;
-  subtitle: string;
 }
 
 export interface ProjectsContent {
-  sectionNumber: string;
   title: string;
   subtitle: string;
 }
 
 export interface ContactContent {
-  sectionNumber: string;
   title: string;
   subtitle: string;
   description: string;
