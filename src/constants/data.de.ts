@@ -8,7 +8,7 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const TECHNOLOGIES: Technology[] = [
   { name: 'Java' },
-  { name: 'JavaScript/TypeScript' },
+  { name: 'TypeScript' },
   { name: 'React' },
   { name: 'Node.js' },
   { name: 'Tailwind CSS' },
