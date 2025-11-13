@@ -14,8 +14,7 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   const Icon = iconMap[project.icon];
   const isLeftAligned = project.imagePosition === 'left';
-  // Support both legacy `image` and new `images` array - use first image only
-  const displayImage = project.images && project.images.length > 0 ? project.images[0] : project.image;
+  const displayImage = project.image;
   const projectUrl = project.external;
 
   const handleImageClick = () => {

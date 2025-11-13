@@ -12,10 +12,8 @@ export interface Project {
   github?: string;
   external?: string;
   icon: 'smartphone' | 'palette' | 'code';
-  /** Primary image (backwards compatibility) */
+  /** Project image/screenshot */
   image?: string;
-  /** Multiple images/screenshots for the project */
-  images?: string[];
   featured: boolean;
   imagePosition: 'left' | 'right';
 }
