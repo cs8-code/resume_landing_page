@@ -1,14 +1,8 @@
 import { useLocalizedData } from '../../hooks/useLocalizedData';
 import { ContactForm } from '../ContactForm';
-import { useLanguage } from '../../context/LanguageContext';
 
 export function ContactSection() {
   const { contactContent } = useLocalizedData();
-  const { language } = useLanguage();
-
-  // WhatsApp number (format: country code + number without + or spaces)
-  const whatsappNumber = "+4917672438493"; // Replace with your actual number
-
 
   return (
     <section id="contact" className="py-40 px-4 relative">
