@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.codecs8.de/</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.codecs8.de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codecs8.de/" />
+  </url>
+
+  <!-- Projects Section -->
+  <url>
+    <loc>https://www.codecs8.de/#projects</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.codecs8.de/#projects" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codecs8.de/#projects" />
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://www.codecs8.de/#contact</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.codecs8.de/#contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codecs8.de/#contact" />
+  </url>
+
+</urlset>
