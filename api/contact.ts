@@ -16,7 +16,7 @@ function escapeHtml(text: string): string {
 }
 
 // Helper function to validate email format
-import { isValidEmail } from '../src/lib/validation';
+import { isValidEmail } from '../src/lib/validation.js';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   // Only allow POST requests
