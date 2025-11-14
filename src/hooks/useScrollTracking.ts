@@ -1,10 +1,10 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 
 function debounce<T extends (...args: any[]) => void>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
-  let timeout: number | null = null;
+  let timeout: ReturnType<typeof setTimeout> | null = null;
 
   return (...args: Parameters<T>) => {
     if (timeout !== null) {
@@ -18,11 +18,14 @@ export function useScrollTracking() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
+  const sectionsRef = useRef(['home', 'projects', 'contact']);
+
   const handleScroll = useCallback(() => {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
+
     setScrolled(window.scrollY > 50);
 
-    const sections = ['home', 'projects', 'contact'];
-    const current = sections.find(section => {
+    const current = sectionsRef.current.find((section) => {
       const element = document.getElementById(section);
       if (element) {
         const rect = element.getBoundingClientRect();
@@ -30,16 +33,23 @@ export function useScrollTracking() {
       }
       return false;
     });
+
     if (current) setActiveSection(current);
   }, []);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const debouncedScroll = debounce(handleScroll, 100);
-    window.addEventListener('scroll', debouncedScroll);
-    // Initial check
-    handleScroll();
-    
-    return () => window.removeEventListener('scroll', debouncedScroll);
+
+    window.addEventListener('scroll', debouncedScroll, { passive: true } as AddEventListenerOptions);
+
+    // Initial check after mount
+    debouncedScroll();
+
+    return () => {
+      window.removeEventListener('scroll', debouncedScroll as EventListener);
+    };
   }, [handleScroll]);
 
   return { scrolled, activeSection };
