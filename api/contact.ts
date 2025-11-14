@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Helper function to escape HTML and prevent XSS attacks
 function escapeHtml(text: string): string {
@@ -16,10 +16,7 @@ function escapeHtml(text: string): string {
 }
 
 // Helper function to validate email format
-function isValidEmail(email: string): boolean {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
+import { isValidEmail } from '../src/lib/validation';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   // Only allow POST requests
@@ -30,12 +27,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     const { name, email, message } = req.body;
 
-    // Log for debugging
-    console.log('Contact form submission:', { name, email, hasMessage: !!message });
-
+    
     // Validate required fields
     if (!name || !email || !message) {
-      console.log('Missing fields:', { name: !!name, email: !!email, message: !!message });
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
@@ -56,7 +50,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // Send email using Resend with escaped HTML to prevent XSS
-    console.log('Attempting to send email...');
     const data = await resend.emails.send({
       from: 'contact@codecs8.de',
       to: 'cs8.code@gmail.com',
@@ -70,8 +63,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
       `,
     });
-
-    console.log('Email sent successfully:', data);
 
     // Check if there was an error from Resend
     if (data.error) {
