@@ -1,0 +1,20 @@
+{
+  "name": "codecs8",
+  "short_name": "codecs8",
+  "description": "Professional Web Development - Maßgeschneiderte Webapp-Entwicklung",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0967f3",
+  "background_color": "#030712",
+  "display": "standalone"
+}
