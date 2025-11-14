@@ -62,7 +62,7 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
             )}
           </div>
 
-          {/* Centered navigation items */}
+          {/* Right-aligned navigation items and language switcher */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
@@ -78,10 +78,6 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
                 }`}></span>
               </button>
             ))}
-          </div>
-
-          {/* Language switcher on the right */}
-          <div className="hidden md:block">
             <LanguageSwitcher />
           </div>
 
