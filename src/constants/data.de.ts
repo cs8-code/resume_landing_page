@@ -58,7 +58,7 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { href: 'https://github.com', icon: 'github', label: 'GitHub' },
+  { href: 'https://github.com/cs8-code', icon: 'github', label: 'GitHub' },
   { href: 'https://www.linkedin.com/in/cengiz-salihoglu/', icon: 'linkedin', label: 'LinkedIn' },
   { href: 'mailto:cs8.code@gmail.com', icon: 'mail', label: 'E-Mail' },
 ];

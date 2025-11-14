@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { useLocalizedData } from '../../hooks/useLocalizedData';
 import { ServiceCard } from '../ServiceCard';
 
@@ -42,8 +42,8 @@ export function HeroSection() {
   const [typingComplete, setTypingComplete] = useState(false);
   const typingIntervalRef = useRef<number | null>(null);
 
-  // Function to type any given text
-  const typeText = (text: string) => {
+  // Function to type any given text - memoized to prevent recreating on each render
+  const typeText = useCallback((text: string) => {
     if (typingIntervalRef.current) {
       window.clearInterval(typingIntervalRef.current);
       typingIntervalRef.current = null;
@@ -60,12 +60,20 @@ export function HeroSection() {
         setTypingComplete(true); // Mark typing as complete
       }
     }, TYPING_SPEED);
-  };
+  }, []);
 
-  // Type name on initial load
+  // Type name on initial load and cleanup on unmount
   useEffect(() => {
     typeText(nameHover);
-  }, []); // Empty dependency array means this runs once on mount
+
+    // Cleanup function to prevent memory leaks
+    return () => {
+      if (typingIntervalRef.current) {
+        window.clearInterval(typingIntervalRef.current);
+        typingIntervalRef.current = null;
+      }
+    };
+  }, [nameHover, typeText]);
 
   // Blinking cursor
   useEffect(() => {

@@ -2,11 +2,10 @@ import { useLanguage } from '../context/LanguageContext';
 
 export function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage();
-  console.log('LanguageSwitcher rendering with language:', language);
 
   const nextLanguage = language === 'en' ? 'de' : 'en';
   const buttonLabel = `Switch language to ${nextLanguage === 'en' ? 'English' : 'Deutsch'}`;
-  
+
   return (
     <button
       type="button"

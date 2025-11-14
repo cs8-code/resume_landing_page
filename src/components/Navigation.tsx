@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { scrollToSection } from '../utils/navigation';
@@ -21,6 +21,9 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
   const { navItems } = useLocalizedData();
   const nameText = "codecs8";
 
+  // Memoize character splitting to avoid recreating on each render
+  const nameChars = useMemo(() => nameText.split(""), [nameText]);
+
   const handleNavigation = (sectionId: string) => {
     scrollToSection(sectionId);
     setIsMenuOpen(false);
@@ -42,7 +45,7 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
                 className="text-2xl font-bold text-gray-100 cursor-pointer select-none transition-opacity duration-300"
                 aria-label="codecs8 - Go to top"
               >
-                {nameText.split("").map((char, i) => {
+                {nameChars.map((char, i) => {
                   const isCs8 = isHovered && i >= 4 && i <= 6;
                   return (
                     <motion.span

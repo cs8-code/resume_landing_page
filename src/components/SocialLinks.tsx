@@ -1,18 +1,12 @@
-import { Mail, Linkedin, Github } from 'lucide-react';
 import { SOCIAL_LINKS, CONTACT_EMAIL } from '../constants/data';
-
-const iconMap = {
-  github: Github,
-  linkedin: Linkedin,
-  mail: Mail,
-};
+import { socialIconMap } from '../constants/iconMaps';
 
 export function SocialLinks() {
   return (
     <>
       <div className="fixed left-8 bottom-0 hidden xl:flex flex-col items-center gap-6 after:content-[''] after:w-px after:h-24 after:bg-gradient-to-t after:from-blue-500/50 after:to-transparent z-40">
         {SOCIAL_LINKS.map((link) => {
-          const Icon = iconMap[link.icon];
+          const Icon = socialIconMap[link.icon];
           return (
             <a
               key={link.label}

@@ -1,11 +1,5 @@
-import { Mail, Linkedin, Github } from 'lucide-react';
 import { useLocalizedData } from '../hooks/useLocalizedData';
-
-const iconMap = {
-  github: Github,
-  linkedin: Linkedin,
-  mail: Mail,
-};
+import { socialIconMap } from '../constants/iconMaps';
 
 export function Footer() {
   const { socialLinks, footerContent } = useLocalizedData();
@@ -15,7 +9,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto text-center">
         <div className="flex md:hidden justify-center gap-6 mb-6">
           {socialLinks.map((link) => {
-            const Icon = iconMap[link.icon as keyof typeof iconMap];
+            const Icon = socialIconMap[link.icon as keyof typeof socialIconMap];
             return (
               <a
                 key={link.label}

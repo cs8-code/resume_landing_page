@@ -11,8 +11,8 @@ export function useLocalizedData() {
   // Merge language-specific project data with language-independent images
   const projects = data.PROJECTS.map((p) => ({
     ...p,
-    // prefer shared images by stable project id, fall back to legacy `image` if present
-    images: PROJECT_IMAGES[p.id] ?? (('image' in p && p.image) ? [p.image as string] : []),
+    // Use shared images by stable project id, or empty array if not found
+    images: PROJECT_IMAGES[p.id] || [],
   }));
 
   return {

@@ -93,6 +93,7 @@ export function ContactForm() {
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
           placeholder={t.name}
+          aria-describedby={status === 'error' ? 'form-error' : undefined}
         />
       </div>
 
@@ -108,6 +109,7 @@ export function ContactForm() {
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
           placeholder={t.email}
+          aria-describedby={status === 'error' ? 'form-error' : undefined}
         />
       </div>
 
@@ -123,6 +125,7 @@ export function ContactForm() {
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors resize-none"
           placeholder={t.message}
+          aria-describedby={status === 'error' ? 'form-error' : undefined}
         />
       </div>
 
@@ -133,7 +136,11 @@ export function ContactForm() {
       )}
 
       {status === 'error' && (
-        <div className="p-4 bg-red-500/10 border border-red-500/50 rounded-lg text-red-400 text-center">
+        <div
+          id="form-error"
+          role="alert"
+          className="p-4 bg-red-500/10 border border-red-500/50 rounded-lg text-red-400 text-center"
+        >
           {t.error}
         </div>
       )}

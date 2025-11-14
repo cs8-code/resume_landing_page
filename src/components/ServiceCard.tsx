@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import { ChevronDown, Check, Cloud, Layout, ShoppingCart, BarChart3 } from 'lucide-react';
 import type { Service } from '../types';
 
@@ -13,7 +13,7 @@ const iconMap = {
   barChart: BarChart3,
 };
 
-export function ServiceCard({ service }: ServiceCardProps) {
+export const ServiceCard = memo(function ServiceCard({ service }: ServiceCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const Icon = iconMap[service.icon];
 
@@ -66,4 +66,4 @@ export function ServiceCard({ service }: ServiceCardProps) {
       </div>
     </div>
   );
-}
+});

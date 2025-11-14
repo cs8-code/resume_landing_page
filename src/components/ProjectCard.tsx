@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Smartphone, Palette, Code, Github, ExternalLink } from 'lucide-react';
 import type { Project } from '../types';
 
@@ -11,7 +12,7 @@ interface ProjectCardProps {
   project: Project;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export const ProjectCard = memo(function ProjectCard({ project }: ProjectCardProps) {
   const Icon = iconMap[project.icon];
   const isLeftAligned = project.imagePosition === 'left';
   const displayImage = project.image;
@@ -102,4 +103,4 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
     </div>
   );
-}
+});
