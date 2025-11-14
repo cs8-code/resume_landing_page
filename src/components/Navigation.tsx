@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { scrollToSection } from '../utils/navigation';
 import { useLocalizedData } from '../hooks/useLocalizedData';
 import { LanguageSwitcher } from './LanguageSwitcher';
+
+const HIGHLIGHT_COLOR = "#0967f3ff";
+const DEFAULT_COLOR = "#f3f4f6";
+const HIGHLIGHT_SHADOW = "0 0 20px rgba(28, 13, 231, 0.9)";
+const NO_SHADOW = "0 0 0px rgba(59,130,246,0)";
 
 interface NavigationProps {
   scrolled: boolean;
@@ -11,7 +17,9 @@ interface NavigationProps {
 
 export function Navigation({ scrolled, activeSection }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const { navItems } = useLocalizedData();
+  const nameText = "codecs8";
 
   const handleNavigation = (sectionId: string) => {
     scrollToSection(sectionId);
@@ -24,8 +32,35 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Empty div for left spacing */}
-          <div className="w-20"></div>
+          {/* Logo/Title on the left - visible when scrolled */}
+          <div className="w-32">
+            {scrolled && (
+              <button
+                onClick={() => handleNavigation('home')}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                className="text-2xl font-bold text-gray-100 cursor-pointer select-none transition-opacity duration-300"
+                aria-label="codecs8 - Go to top"
+              >
+                {nameText.split("").map((char, i) => {
+                  const isCs8 = isHovered && i >= 4 && i <= 6;
+                  return (
+                    <motion.span
+                      key={i}
+                      animate={{
+                        color: isCs8 ? HIGHLIGHT_COLOR : DEFAULT_COLOR,
+                        textShadow: isCs8 ? HIGHLIGHT_SHADOW : NO_SHADOW,
+                      }}
+                      transition={{ duration: 0.3, type: "spring", stiffness: 40 }}
+                      aria-hidden={true}
+                    >
+                      {char}
+                    </motion.span>
+                  );
+                })}
+              </button>
+            )}
+          </div>
 
           {/* Centered navigation items */}
           <div className="hidden md:flex items-center space-x-8">

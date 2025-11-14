@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import { useLocalizedData } from '../../hooks/useLocalizedData';
 import { ServiceCard } from '../ServiceCard';
 
-const TYPING_SPEED = 120;
+const TYPING_SPEED = 200;
 const CURSOR_BLINK_SPEED = 500;
 const HIGHLIGHT_COLOR = "#0967f3ff";
 const DEFAULT_COLOR = "#f3f4f6";
@@ -99,7 +99,7 @@ export function HeroSection() {
                       color: isCs8 ? HIGHLIGHT_COLOR : DEFAULT_COLOR,
                       textShadow: isCs8 ? HIGHLIGHT_SHADOW : NO_SHADOW,
                     }}
-                    transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 40 }}
                     aria-hidden={true}
                   >
                     {char}
