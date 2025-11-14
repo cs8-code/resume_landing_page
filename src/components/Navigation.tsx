@@ -7,8 +7,6 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 
 const HIGHLIGHT_COLOR = "#0967f3ff";
 const DEFAULT_COLOR = "#f3f4f6";
-const HIGHLIGHT_SHADOW = "0 0 20px rgba(28, 13, 231, 0.9)";
-const NO_SHADOW = "0 0 0px rgba(59,130,246,0)";
 
 interface NavigationProps {
   scrolled: boolean;

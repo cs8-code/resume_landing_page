@@ -67,13 +67,27 @@ export function ContactForm() {
         setFormData({ name: '', email: '', message: '' });
         setTimeout(() => setStatus('idle'), 5000);
       } else {
-        const errorData = await response.json();
-        console.error('Server error:', errorData);
+        let errorData;
+        try {
+          errorData = await response.json();
+        } catch {
+          errorData = { error: 'Failed to parse error response' };
+        }
+        console.error('Server error:', {
+          status: response.status,
+          statusText: response.statusText,
+          data: errorData,
+          url: response.url
+        });
         setStatus('error');
         setTimeout(() => setStatus('idle'), 5000);
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error submitting form:', {
+        message: error instanceof Error ? error.message : 'Unknown error',
+        error: error,
+        stack: error instanceof Error ? error.stack : undefined
+      });
       setStatus('error');
       setTimeout(() => setStatus('idle'), 5000);
     }
