@@ -95,7 +95,7 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-950/95 backdrop-blur-lg border-t border-blue-500/20 animate-fade-in">
+        <div className="md:hidden bg-gray-950/95 backdrop-blur-lg border-t border-blue-500/20">
           <div className="px-4 py-4 space-y-3">
             {navItems.map((item) => (
               <button
