@@ -1,4 +1,5 @@
 import type { NavItem, Project, Technology, SocialLink, Service, HeroContent, ServicesContent, ProjectsContent, ContactContent, FooterContent } from '../types';
+import { TECHNOLOGIES_SHARED } from './shared';
 
 export const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'Start' },
@@ -6,16 +7,7 @@ export const NAV_ITEMS: NavItem[] = [
   { id: 'contact', label: 'Kontakt' },
 ];
 
-export const TECHNOLOGIES: Technology[] = [
-  { name: 'Java' },
-  { name: 'TypeScript' },
-  { name: 'React' },
-  { name: 'Node.js' },
-  { name: 'Tailwind CSS' },
-  { name: 'Supabase' },
-  { name: 'Git' },
-  { name: 'JavaScript' }
-];
+export const TECHNOLOGIES: Technology[] = [...TECHNOLOGIES_SHARED];
 
 export const PROJECTS: Project[] = [
   {
