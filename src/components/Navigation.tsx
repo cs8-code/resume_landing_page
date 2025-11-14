@@ -42,17 +42,17 @@ export function Navigation({ scrolled, activeSection }: NavigationProps) {
                 onClick={() => handleNavigation('home')}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                className="text-2xl font-bold text-gray-100 cursor-pointer select-none transition-opacity duration-300"
+                className="text-2xl font-bold text-gray-100 cursor-pointer select-none transition-transform duration-300 hover:scale-110"
                 aria-label="codecs8 - Go to top"
               >
                 {nameChars.map((char, i) => {
-                  const isCs8 = isHovered && i >= 4 && i <= 6;
+                  // cs8 is always highlighted, with extra glow on hover
+                  const isCs8 = i >= 4 && i <= 6;
                   return (
                     <motion.span
                       key={i}
                       animate={{
-                        color: isCs8 ? HIGHLIGHT_COLOR : DEFAULT_COLOR,
-                        textShadow: isCs8 ? HIGHLIGHT_SHADOW : NO_SHADOW,
+                        color: isCs8 ? HIGHLIGHT_COLOR : DEFAULT_COLOR
                       }}
                       transition={{ duration: 0.3, type: "spring", stiffness: 40 }}
                       aria-hidden={true}
