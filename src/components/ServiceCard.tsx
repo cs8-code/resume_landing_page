@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, Check, Cloud, Layout, ShoppingCart } from 'lucide-react';
+import { ChevronDown, Check, Cloud, Layout, ShoppingCart, BarChart3 } from 'lucide-react';
 import type { Service } from '../types';
 
 interface ServiceCardProps {
@@ -10,6 +10,7 @@ const iconMap = {
   cloud: Cloud,
   layout: Layout,
   shoppingCart: ShoppingCart,
+  barChart: BarChart3,
 };
 
 export function ServiceCard({ service }: ServiceCardProps) {

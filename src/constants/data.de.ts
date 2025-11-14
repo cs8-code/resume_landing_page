@@ -65,7 +65,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const SERVICES: Service[] = [
   {
-    title: '(SaaS) Lösungen',
+    title: 'Software as a Service (SaaS)',
     description: 'Maßgeschneiderte Softwarelösungen als Service, die Ihre Geschäftsprozesse optimieren und die Effizienz steigern. Skalierbar, sicher und von überall zugänglich.',
     features: [
       'Entwicklung individueller Funktionen',
@@ -78,20 +78,33 @@ export const SERVICES: Service[] = [
     icon: 'cloud'
   },
   {
-    title: 'Landing Pages',
-    description: 'Konversionsstarke Landing Pages, entwickelt um Leads zu generieren und Aktionen auszulösen. Optimiert für Performance und Conversion-Raten.',
+    title: 'Landing Pages & Unternehmenswebseiten',
+    description: 'Professionelle Webseiten und konversionsstarke Landing Pages für Ihr Unternehmen. Von einfachen Landing Pages bis zu vollständigen Unternehmenswebseiten, optimiert für Performance und Conversions.',
     features: [
-      'Konversionsfokussiert',
-      'A/B-Testing-fähig',
+      'Responsive Design',
+      'SEO-Optimierung',
       'Formular-Integration',
       'Performance-Optimierung',
       'Analytics-Tracking',
-      'CTA-Optimierung'
+      'Content Management'
     ],
     icon: 'layout'
   },
   {
-    title: 'E-Commerce Webseiten',
+    title: 'Individuelle Dashboards & Admin-Panels',
+    description: 'Leistungsstarke Dashboards und Admin-Panels, maßgeschneidert für Ihre Geschäftsanforderungen. Visualisieren Sie Daten, verwalten Sie Benutzer und steuern Sie Ihre Plattform mit intuitiven Oberflächen.',
+    features: [
+      'Echtzeit-Datenvisualisierung',
+      'Benutzerverwaltung',
+      'Analytics & Reporting',
+      'Rollenbasierte Zugriffskontrolle',
+      'Individuelle Metriken & KPIs',
+      'Interaktive Diagramme & Grafiken'
+    ],
+    icon: 'barChart'
+  },
+  {
+    title: 'E-Commerce-Lösungen',
     description: 'Komplette E-Commerce-Lösungen mit sicherer Zahlungsabwicklung, Bestandsverwaltung und nahtlosem Einkaufserlebnis.',
     features: [
       'Zahlungsintegration',

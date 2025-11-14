@@ -79,20 +79,33 @@ export const SERVICES: Service[] = [
     icon: 'cloud'
   },
   {
-    title: 'Landing Pages',
-    description: 'High-converting landing pages designed to capture leads and drive action. Optimized for performance and conversion rates.',
+    title: 'Landing Pages & Business Websites',
+    description: 'Professional websites and high-converting landing pages for your business. From simple landing pages to complete business websites, optimized for performance and conversions.',
     features: [
-      'Conversion Focused',
-      'A/B Testing Ready',
+      'Responsive Design',
+      'SEO Optimization',
       'Form Integration',
       'Performance Optimized',
       'Analytics Tracking',
-      'CTA Optimization'
+      'Content Management'
     ],
     icon: 'layout'
   },
   {
-    title: 'E-Commerce Sites',
+    title: 'Custom Dashboards & Admin Panels',
+    description: 'Powerful dashboards and admin panels tailored to your business needs. Visualize data, manage users, and control your platform with intuitive interfaces.',
+    features: [
+      'Real-time Data Visualization',
+      'User Management',
+      'Analytics & Reporting',
+      'Role-based Access Control',
+      'Custom Metrics & KPIs',
+      'Interactive Charts & Graphs'
+    ],
+    icon: 'barChart'
+  },
+  {
+    title: 'E-Commerce solutions',
     description: 'Complete e-commerce solutions with secure payment processing, inventory management, and seamless shopping experiences.',
     features: [
       'Payment Integration',
@@ -104,7 +117,7 @@ export const SERVICES: Service[] = [
     ],
     icon: 'shoppingCart'
   },
- 
+
 ];
 
 export const CONTACT_EMAIL = 'cs8.code@gmail.com';
