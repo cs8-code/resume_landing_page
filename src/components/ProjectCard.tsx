@@ -67,7 +67,7 @@ export const ProjectCard = memo(function ProjectCard({ project }: ProjectCardPro
           </span>
         </div>
         <div className="bg-gray-900/80 backdrop-blur-sm p-7 rounded-xl shadow-xl border border-gray-800 group-hover:border-blue-500/30 transition-all duration-300">
-          <p className="text-gray-300 leading-relaxed text-base">
+          <p className="text-gray-300 leading-relaxed text-base whitespace-pre-line">
             {project.description}
           </p>
         </div>

@@ -24,6 +24,24 @@ export const PROJECTS: Project[] = [
     imagePosition: 'right',
   },
   {
+    id: 'dashboard',
+    title: 'Business Management Dashboard',
+    status: 'Deployed',
+    description: 'A cross-platform desktop application for service-based businesses to manage daily operations, client relationships, and team scheduling.\n\n' + 
+                'Key Features:\n' + 
+                '- Kanban-style task board with drag-and-drop functionality\n' +
+                '- Client management with full CRUD operations\n' +
+                ' - Team availability scheduling and assignment tracking\n' +
+                ' - Interactive dashboard with real-time metrics and weekly calendar view\n' +
+                ' - One-click task status updates throughout the application',
+    technologies: [],
+    github: 'https://github.com/cs8-code/greenbros_dashboard_app.git',
+    icon: 'code',
+    image: '/dashboard_app.PNG',
+    featured: false,
+    imagePosition: 'right',
+  },
+  {
     id: 'spaceheroes',
     title: 'Clearing Out Services Website',
     status: 'Deployed',
@@ -32,21 +50,9 @@ export const PROJECTS: Project[] = [
     external: 'https://cs8-code.github.io/spaceheroes/',
     icon: 'palette',
     image: '/spaceheroes_screenshot.png',
-    featured: true,
+    featured: false,
     imagePosition: 'right',
-  },
-  {
-    id: 'greenbros',
-    title: 'Gardening Service Website',
-    status: 'In Development',
-    description: 'A landing page for a local gardening service, showcasing services, portfolio, and contact information with a focus on SEO and user experience.',
-    technologies: [],
-    github: 'https://github.com/cs8-code/thegreenbros.git',
-    icon: 'code',
-    image: '/greenbros_screenshot.png',
-    featured: true,
-    imagePosition: 'right',
-  },
+  }
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [

@@ -15,12 +15,30 @@ export const PROJECTS: Project[] = [
     title: 'Vernetzungsplattform für die Bauindustrie',
     status: 'In Entwicklung',
     description: 'Eine digitale Plattform, die Subunternehmer und Bauleiter vernetzt — verbindet Expertise mit Projekten und ermöglicht branchenweite Zusammenarbeit.',
-    technologies: ['React', 'TypeScript', 'Supabase (PostgreSQL)', 'Tailwind CSS'],
+    technologies: ['React', 'TypeScript', 'Node.js/Express', 'Supabase', 'Tailwind CSS'],
     github: 'https://github.com/cs8-code/siportal.git',
     external: 'https://siportal.bolt.host/',
     icon: 'smartphone',
     image: '/siportal_screenshot1.png',
     featured: true,
+    imagePosition: 'right',
+  },
+  {
+    id: 'dashboard',
+    title: 'Business Management Dashboard',
+    status: 'Abgeschlossen',
+    description: 'Eine plattformübergreifende Desktop-Anwendung für dienstleistungsorientierte Unternehmen zur Verwaltung des Tagesgeschäfts, der Kundenbeziehungen und der Teamplanung.' +
+                  '\n\n Wichtigste Funktionen:\n' + 
+                  '- Aufgabenboard im Kanban-Stil mit Drag-and-Drop-Funktionalität\n' + 
+                  '- Kundenverwaltung mit vollständigen CRUD-Operationen\n' + 
+                  '- Planung der Teamverfügbarkeit und Nachverfolgung von Zuweisungen\n' + 
+                  '- Interaktives Dashboard mit Echtzeit-Kennzahlen und Wochenkalenderansicht\n' + 
+                  '- Aktualisierung des Aufgabenstatus mit einem Klick in der gesamten Anwendung',
+    technologies: [],
+    github: 'https://github.com/cs8-code/greenbros_dashboard_app.git',
+    icon: 'code',
+    image: '/dashboard_app.PNG',
+    featured: false,
     imagePosition: 'right',
   },
   {
@@ -32,19 +50,7 @@ export const PROJECTS: Project[] = [
     external: 'https://cs8-code.github.io/spaceheroes/',
     icon: 'palette',
     image: '/spaceheroes_screenshot.png',
-    featured: true,
-    imagePosition: 'right',
-  },
-  {
-    id: 'greenbros',
-    title: 'Webseite für Gartenbauservice',
-    status: 'Abgeschlossen',
-    description: 'Eine Landing Page für einen lokalen Gartenbauservice, die Dienstleistungen, Portfolio und Kontaktinformationen präsentiert, mit Fokus auf SEO und Benutzerfreundlichkeit.',
-    technologies: [],
-    github: 'https://github.com/cs8-code/thegreenbros.git',
-    icon: 'code',
-    image: '/greenbros_screenshot.png',
-    featured: true,
+    featured: false,
     imagePosition: 'right',
   },
 ];
@@ -126,7 +132,7 @@ export const SERVICES_CONTENT: ServicesContent = {
 };
 
 export const PROJECTS_CONTENT: ProjectsContent = {
-  title: "Meine aktuellen Projekte",
+  title: "Aktuelle Projekte",
   subtitle: ""
 };
 
