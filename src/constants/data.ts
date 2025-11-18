@@ -17,7 +17,6 @@ export const PROJECTS: Project[] = [
     description: 'A digital platform that connects subcontractors and construction supervisors — matching expertise with projects and enabling collaboration across the industry.',
     technologies: ['React', 'TypeScript', 'Supabase (PostgreSQL)', 'Tailwind CSS'],
     github: 'https://github.com/cs8-code/siportal.git',
-    external: 'https://siportal.bolt.host/',
     icon: 'smartphone',
     image: '/siportal_screenshot1.png',
     featured: true,
