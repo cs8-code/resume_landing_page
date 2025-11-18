@@ -35,6 +35,7 @@ export const PROJECTS: Project[] = [
                 ' - One-click task status updates throughout the application',
     technologies: [],
     github: 'https://github.com/cs8-code/greenbros_dashboard_app.git',
+    external: 'https://greenbros-app.vercel.app',
     icon: 'code',
     image: '/dashboard_app.PNG',
     featured: false,
