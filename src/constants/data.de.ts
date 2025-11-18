@@ -1,4 +1,4 @@
-import type { NavItem, Project, Technology, SocialLink, Service, HeroContent, ServicesContent, ProjectsContent, ContactContent, FooterContent } from '../types';
+import type { NavItem, Project, Technology, Service, HeroContent, ServicesContent, ProjectsContent, ContactContent, FooterContent } from '../types';
 import { TECHNOLOGIES_SHARED } from './shared';
 
 export const NAV_ITEMS: NavItem[] = [
@@ -55,11 +55,8 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const SOCIAL_LINKS: SocialLink[] = [
-  { href: 'https://github.com/cs8-code', icon: 'github', label: 'GitHub' },
-  { href: 'https://www.linkedin.com/in/cengiz-salihoglu/', icon: 'linkedin', label: 'LinkedIn' },
-  { href: 'mailto:cs8.code@gmail.com', icon: 'mail', label: 'E-Mail' },
-];
+// Re-export SOCIAL_LINKS from shared
+export { SOCIAL_LINKS } from './shared';
 
 export const SERVICES: Service[] = [
   {
@@ -116,9 +113,8 @@ export const SERVICES: Service[] = [
   }
 ];
 
-export const CONTACT_EMAIL = 'cs8.code@gmail.com';
-export const SITE_TITLE = 'codecs8';
-export const AUTHOR_NAME = 'Cengiz Salihoglu';
+// Re-export shared constants
+export { CONTACT_EMAIL, SITE_TITLE, AUTHOR_NAME } from './shared';
 
 export const HERO_CONTENT: HeroContent = {
   greeting: "Hallo, ich bin Cengiz",
