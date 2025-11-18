@@ -42,6 +42,18 @@ export const PROJECTS: Project[] = [
     imagePosition: 'right',
   },
   {
+    id: 'greenbros',
+    title: 'Webseite für ein Grünpflegeunternehmen',
+    status: 'Abgeschlossen',
+    description: 'Eine professionelle Webseite für ein lokales Garten- und Landschaftsbauunternehmen, die deren Dienstleistungen in Gartenpflege, Baumpflege und Landschaftsgestaltung präsentiert. Mit Service-Portfolios, saisonalen Angeboten und einem integrierten Kontaktsystem für Anfragen und Beratungstermine.',
+    technologies: [],
+    github: 'https://github.com/cs8-code/thegreenbros.git',
+    icon: 'palette',
+    image: '/greenbros_screenshot.png',
+    featured: false,
+    imagePosition: 'right',
+  },
+  {
     id: 'spaceheroes',
     title: 'Webseite für Entrümpelungsdienste',
     status: 'Abgeschlossen',

@@ -42,6 +42,18 @@ export const PROJECTS: Project[] = [
     imagePosition: 'right',
   },
   {
+    id: 'greenbros',
+    title: 'Gardening Service Website',
+    status: 'Completed',
+    description: 'A professional website for a local gardening and landscaping company, showcasing their services in garden maintenance, tree care, and landscape design. Features include service portfolios, seasonal offerings, and an integrated contact system for quotes and consultations.',
+    technologies: [],
+    github: 'https://github.com/cs8-code/thegreenbros.git',
+    icon: 'palette',
+    image: '/greenbros_screenshot.png',
+    featured: false,
+    imagePosition: 'right',
+  },
+  {
     id: 'spaceheroes',
     title: 'Clearing Out Services Website',
     status: 'Deployed',
