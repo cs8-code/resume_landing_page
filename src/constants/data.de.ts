@@ -130,9 +130,12 @@ export { CONTACT_EMAIL, SITE_TITLE, AUTHOR_NAME } from './shared';
 
 export const HERO_CONTENT: HeroContent = {
   greeting: "Hallo, ich bin Cengiz",
-  tagline: "Ich entwickle digitale Lösungen für lokale Unternehmen.",
-  description: "Von der Idee bis zur maßgeschneiderten, funktionalen Webanwendung - Ich kombiniere technische Expertise mit kreativem Design um außergewöhnliche digitale Erlebnisse zu schaffen.",
-  ctaButton: "Meine Arbeit"
+  tagline: "Ich entwickle digitale Lösungen für Ihr Unternehmen.",
+  description: "Von der Idee bis zur smarten, funktionalen Web- oder Desktop-Anwendung. \n" +
+                "Ich kombiniere technische Expertise mit kreativem Design um maßgescheiderte digitale Produkte zu kreieren.",
+  aitagline: "Intelligenter Einsatz von KI",
+  aidescription: "Ich nutze und integriere moderne KI-Tools und APIs, um die Entwicklung zu beschleunigen, Arbeitsabläufe zu optimieren und zu automatisieren, damit Ihre Projekte schneller, in höherer Qualität und genau auf Ihre Bedürfnisse zugeschnitten geliefert werden.",
+  aicaption: "Smarter Code, bessere Ergebnisse"
 };
 
 export const SERVICES_CONTENT: ServicesContent = {

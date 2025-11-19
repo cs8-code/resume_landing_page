@@ -40,7 +40,9 @@ export interface HeroContent {
   greeting: string;
   tagline: string;
   description: string;
-  ctaButton: string;
+  aitagline: string;
+  aidescription: string;
+  aicaption: string;
 }
 
 export interface ServicesContent {

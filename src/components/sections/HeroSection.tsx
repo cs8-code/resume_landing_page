@@ -149,10 +149,17 @@ export function HeroSection() {
 
             {/* Right Column - Description */}
             <div>
-              <h2 className="text-x1 sm:text-3xl font-light text-gray-400 leading-snug">
+              <h2 className="text-x1 sm:text-3xl font-light text-gray-400 leading-snug whitespace-pre-line">
                 {heroContent.description}
               </h2>
             </div>
+          </div>
+
+          {/* AI Section */}
+          <div>
+            <h2 className="text-2xl font-bold mb-4">{heroContent.aitagline}</h2>
+            <p className="text-gray-700 dark:text-gray-300">{heroContent.aidescription}</p>
+            <p className="mt-2 text-gray-600 dark:text-gray-400 italic">{heroContent.aicaption}</p>
           </div>
 
           {/* Technology Icons Scrolling */}
@@ -193,5 +200,6 @@ export function HeroSection() {
 
       </div>
     </section>
+    
   );
 }
