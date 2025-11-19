@@ -102,6 +102,13 @@
     animation: scrollRTL 20s linear infinite;
   }
 
+  /* Faster animation on mobile */
+  @media (max-width: 768px) {
+    .animate-scroll-rtl {
+      animation: scrollRTL 10s linear infinite;
+    }
+  }
+
   @keyframes scrollRTL {
     0% {
       transform: translateX(0);
