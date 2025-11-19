@@ -14,14 +14,18 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 // Technologies (same for all languages)
 export const TECHNOLOGIES_SHARED: readonly Technology[] = [
-  { name: 'Java' },
-  { name: 'TypeScript' },
-  { name: 'React' },
-  { name: 'Node.js' },
-  { name: 'Tailwind CSS' },
+  { name: 'ChatGPT' },
+  { name: 'Claude Code' },
+  { name: 'GitHub Copilot' },
   { name: 'Supabase' },
+  { name: 'React' },
+  { name: 'TypeScript' },
+  { name: 'Next.js' },
+  { name: 'Tailwind CSS' },
   { name: 'Git' },
   { name: 'JavaScript' },
   { name: 'HTML5' },
   { name: 'CSS3' },
+  { name: 'Python' },
+  { name: 'Java' }
 ] as const;

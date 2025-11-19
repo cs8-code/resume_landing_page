@@ -134,7 +134,7 @@ export const HERO_CONTENT: HeroContent = {
   tagline: "I build digital solutions for your business.",
   description: "Transforming ideas into smart, functional web or desktop applications. I combine technical expertise with creative problem-solving to deliver exceptional digital products.",
   aitagline: "Building Smarter with AI",
-  aidescription: "I use and integrate modern AI tools and APIs to accelerate development, optimize and set up automated workflows, ensuring your projects are delivered faster, with higher quality and tailored precisely to your needs.",
+  aidescription: "I use and integrate modern AI tools, frameworks and APIs to accelerate development, optimize and set up automated workflows, ensuring your projects are delivered faster, with higher quality and tailored precisely to your needs.",
   aicaption: "Smarter code, better results"
 };
 

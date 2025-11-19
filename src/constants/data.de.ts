@@ -18,7 +18,7 @@ export const PROJECTS: Project[] = [
     technologies: ['React', 'TypeScript', 'Node.js/Express', 'Supabase', 'Tailwind CSS'],
     github: 'https://github.com/cs8-code/personalmanager_hektor.git',
     icon: 'smartphone',
-    image: '/siportal_screenshot1.png',
+    image: '/project_images/siportal_screenshot1.png',
     featured: true,
     imagePosition: 'right',
   },
@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/cs8-code/greenbros_dashboard_app.git',
     external: 'https://greenbros-app.vercel.app',
     icon: 'code',
-    image: '/dashboard_app.PNG',
+    image: '/project_images/dashboard_app.PNG',
     featured: false,
     imagePosition: 'right',
   },
@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
     technologies: [],
     github: 'https://github.com/cs8-code/thegreenbros.git',
     icon: 'palette',
-    image: '/greenbros_screenshot.png',
+    image: '/project_images/greenbros_screenshot.png',
     featured: false,
     imagePosition: 'right',
   },
@@ -61,7 +61,7 @@ export const PROJECTS: Project[] = [
     technologies: [],
     external: 'https://cs8-code.github.io/spaceheroes/',
     icon: 'palette',
-    image: '/spaceheroes_screenshot.png',
+    image: '/project_images/spaceheroes_screenshot.png',
     featured: false,
     imagePosition: 'right',
   },
@@ -134,7 +134,7 @@ export const HERO_CONTENT: HeroContent = {
   description: "Von der Idee bis zur smarten, funktionalen Web- oder Desktop-Anwendung. \n" +
                 "Ich kombiniere technische Expertise mit kreativem Design um maßgescheiderte digitale Produkte zu kreieren.",
   aitagline: "Intelligenter Einsatz von KI",
-  aidescription: "Ich nutze und integriere moderne KI-Tools und APIs, um die Entwicklung zu beschleunigen, Arbeitsabläufe zu optimieren und zu automatisieren, damit Ihre Projekte schneller, in höherer Qualität und genau auf Ihre Bedürfnisse zugeschnitten geliefert werden.",
+  aidescription: "Ich nutze und integriere moderne KI-Tools, Frameworks und APIs, um die Entwicklung zu beschleunigen, Arbeitsabläufe zu optimieren und zu automatisieren, damit Ihre Projekte schneller, in höherer Qualität und genau auf Ihre Bedürfnisse zugeschnitten geliefert werden.",
   aicaption: "Smarter Code, bessere Ergebnisse"
 };
 
