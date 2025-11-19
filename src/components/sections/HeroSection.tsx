@@ -167,7 +167,7 @@ export function HeroSection() {
 
           {/* Technology Icons Scrolling */}
           <div className="mt-8 overflow-hidden">
-            <div className="flex w-max animate-scroll-rtl duration-[60s] md:duration-[40s]">
+            <div className="flex w-max animate-scroll-rtl">
               {/* Render the list twice for a seamless loop */}
               {[...Array(2)].map((_, i) => (
                 <div key={i} className="flex flex-shrink-0 gap-8 px-4">
