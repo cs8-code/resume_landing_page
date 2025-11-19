@@ -99,13 +99,13 @@
   }
 
   .animate-scroll-rtl {
-    animation: scrollRTL 20s linear infinite;
+    animation: scrollRTL 40s linear infinite;
   }
 
   /* Faster animation on mobile */
   @media (max-width: 768px) {
     .animate-scroll-rtl {
-      animation: scrollRTL 10s linear infinite;
+      animation: scrollRTL 40s linear infinite;
     }
   }
 
