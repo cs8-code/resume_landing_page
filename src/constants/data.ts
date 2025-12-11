@@ -11,14 +11,14 @@ export const TECHNOLOGIES: Technology[] = [...TECHNOLOGIES_SHARED];
 
 export const PROJECTS: Project[] = [
   {
-    id: 'siportal',
+    id: 'hektor',
     title: 'Construction Industry Networking Platform',
     status: 'In Development',
     description: 'A digital platform that connects subcontractors and construction supervisors — matching expertise with projects and enabling collaboration across the industry.',
     technologies: ['React', 'TypeScript', 'Supabase (PostgreSQL)', 'Tailwind CSS'],
-    github: 'https://github.com/cs8-code/siportal.git',
+    external: 'https://personalagentur-hektor.vercel.app',
     icon: 'smartphone',
-    image: '/project_images/siportal_screenshot1.png',
+    image: '/project_images/hektor_screenshot.png',
     featured: true,
     imagePosition: 'right',
   },
