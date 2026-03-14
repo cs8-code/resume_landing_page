@@ -23,6 +23,18 @@ export const PROJECTS: Project[] = [
     imagePosition: 'right',
   },
   {
+    id: 'lingolive-ai',
+    title: 'Lingolive - KI-gestützte Sprachlernplattform',
+    status: 'In Entwicklung',
+    description: 'Eine innovative Plattform, die KI nutzt, um personalisierte Sprachlernprogramme zu erstellen. Mit interaktiven Übungen, Echtzeit-Feedback und adaptiven Lernpfaden bietet Lingolive ein immersives Lernerlebnis für alle Sprachniveaus.',
+    technologies: [],
+    external: 'https://lingolive-ai.vercel.app/',
+    icon: 'smartphone',
+    image: '/project_images/lingolive.png',
+    featured: true,
+    imagePosition: 'right',
+  },
+  {
     id: 'dashboard',
     title: 'Business Management Dashboard',
     status: 'Abgeschlossen',

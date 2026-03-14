@@ -22,6 +22,18 @@ export const PROJECTS: Project[] = [
     featured: true,
     imagePosition: 'right',
   },
+    {
+    id: 'lingolive-ai',
+    title: 'Lingolive - AI-Powered Language Learning Platform',
+    status: 'In Development',
+    description: 'An innovative platform that leverages AI to create personalized language learning programs. With interactive exercises, real-time feedback, and adaptive learning paths, Lingolive offers an immersive learning experience for all language levels.',
+    technologies: [],
+    external: 'https://lingolive-ai.vercel.app/',
+    icon: 'smartphone',
+    image: '/project_images/lingolive.png',
+    featured: true,
+    imagePosition: 'right',
+  },
   {
     id: 'dashboard',
     title: 'Business Management Dashboard',
