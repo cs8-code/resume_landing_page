@@ -12,7 +12,7 @@ export const TECHNOLOGIES: Technology[] = [...TECHNOLOGIES_SHARED];
 export const PROJECTS: Project[] = [
   {
     id: 'hektor',
-    title: 'Construction Industry Networking Platform',
+    title: 'Hektor - Recruitmentent Agency',
     status: 'In Development',
     description: 'A digital platform that connects subcontractors and construction supervisors — matching expertise with projects and enabling collaboration across the industry.',
     technologies: ['React', 'TypeScript', 'Supabase (PostgreSQL)', 'Tailwind CSS'],
@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
   },
     {
     id: 'lingolive-ai',
-    title: 'Lingolive - AI-Powered Language Learning Platform',
+    title: 'lingolive - AI Powered Language Learning Platform',
     status: 'In Development',
     description: 'An innovative platform that leverages AI to create personalized language learning programs. With interactive exercises, real-time feedback, and adaptive learning paths, Lingolive offers an immersive learning experience for all language levels.',
     technologies: [],

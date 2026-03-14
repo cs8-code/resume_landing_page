@@ -12,9 +12,9 @@ export const TECHNOLOGIES: Technology[] = [...TECHNOLOGIES_SHARED];
 export const PROJECTS: Project[] = [
   {
     id: 'hektor',
-    title: 'Vernetzungsplattform für die Bauindustrie',
+    title: 'Hektor - Vermittlungsgentur',
     status: 'In Entwicklung',
-    description: 'Eine digitale Plattform, die Subunternehmer und Bauleiter vernetzt — verbindet Expertise mit Projekten und ermöglicht branchenweite Zusammenarbeit.',
+    description: 'Eine digitale Plattform, die Subunternehmer und Bauleiter miteinander verbindet - Expertise wird mit Projekten abgeglichen und Zusammenarbeit in der gesamten Branche ermöglicht.',
     technologies: ['React', 'TypeScript', 'Node.js/Express', 'Supabase', 'Tailwind CSS'],
     external: 'https://personalagentur-hektor.vercel.app',
     icon: 'smartphone',
@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'lingolive-ai',
-    title: 'Lingolive - KI-gestützte Sprachlernplattform',
+    title: 'Lingolive - KI-Sprachlernpartner',
     status: 'In Entwicklung',
     description: 'Eine innovative Plattform, die KI nutzt, um personalisierte Sprachlernprogramme zu erstellen. Mit interaktiven Übungen, Echtzeit-Feedback und adaptiven Lernpfaden bietet Lingolive ein immersives Lernerlebnis für alle Sprachniveaus.',
     technologies: [],
